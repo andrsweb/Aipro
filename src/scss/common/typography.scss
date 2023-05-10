@@ -29,9 +29,19 @@ h1, .h1 {
 
 h2, .h2 {
 	font-size: 24px;
+	max-width: 734px;
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 36px;
+	line-height: 44px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $white;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 54px;
+		line-height: 59px;
+		margin-bottom: 83px;
 	}
 }
 
