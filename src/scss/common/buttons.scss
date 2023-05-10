@@ -12,7 +12,8 @@
 	border: 2px solid $blackened;
 	border-radius: $bord;
 	cursor: pointer;
-	transition: opacity ease $tr;
+	transition: opacity ease $tr,
+		background-color ease $tr;
 
 	&:hover {
 		opacity: $op;
@@ -23,6 +24,19 @@
 
 		@media all and (min-width: $lg) {
 			display: block;
+		}
+	}
+
+	&.hero_button {
+		font-size: 16px;
+		color: $white;
+		background-color: $accent1;
+		border: none;
+		padding: 16px 32px;
+
+		&:hover {
+			opacity: 1;
+			background-color: #F47750;
 		}
 	}
 }

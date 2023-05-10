@@ -1,0 +1,39 @@
+.hero {
+	background-color: $accent2;
+	padding: 40px 0;
+
+	@media all and (min-width: $lg) {
+		padding: 76px 0 78px;
+	}
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&__title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@media all and (min-width: $lg) {
+				max-width: 627px;
+				align-items: flex-start;
+			}
+		}
+
+		&__img {
+			display: none;
+
+			@media all and (min-width: $lg) {
+				display: block;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+
+}
