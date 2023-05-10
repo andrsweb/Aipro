@@ -1,0 +1,20 @@
+.button {
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 12px 17px;
+	text-align: center;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: $blackened;
+	border: 2px solid $blackened;
+	border-radius: $bord;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
+}

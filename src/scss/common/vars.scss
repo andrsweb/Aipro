@@ -9,10 +9,10 @@ $xxl: 1366px;
 // Container max-width.
 $container-md: 760px;
 $container-lg: 990px;
-$container-xl: 1276px;
+$container-xl: 1316px;
 
 // Container padding.
-$container-padding: 24px;
+$container-padding: 20px;
 
 // Font families.
 $ff			: 'Syne', sans-serif;
@@ -41,4 +41,6 @@ $accent1	: #F04A15;
 $accent2	: #EAFC57;
 
 // Others.
-$tr: 0.35s;
+$tr   : 0.35s;
+$op   : 0.75;
+$bord : 24px;

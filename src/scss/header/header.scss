@@ -1,0 +1,39 @@
+.header {
+	padding: 52px 0;
+	background-color: $accent2;
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&-logo {
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&-nav {
+
+		&__item {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 14px;
+			line-height: 24px;
+			text-align: center;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+			margin-right: 40px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
