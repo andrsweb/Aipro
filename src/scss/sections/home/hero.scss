@@ -1,0 +1,22 @@
+.hero {
+	padding: 76px 0 78px;
+	background-color: $accent2;
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&__title {
+			max-width: 627px;
+		}
+
+		&__img {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+
+}
