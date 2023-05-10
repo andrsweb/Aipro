@@ -1,0 +1,60 @@
+.button {
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 12px 17px;
+	text-align: center;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: $blackened;
+	border: 2px solid $blackened;
+	border-radius: $bord;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
+
+	&.button_header {
+		display: none;
+
+		@media all and (min-width: $lg) {
+			display: block;
+		}
+	}
+}
+
+.burger-button {
+	width: 24px;
+	height: 24px;
+	padding: 8.5px 3px;
+	position: relative;
+
+	& span {
+		position: absolute;
+		left: 0;
+		top: 7px;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: $black;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 7px;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $black;
+		}
+	}
+
+	@media all and (min-width: $lg) {
+		display: none;
+	}
+}
