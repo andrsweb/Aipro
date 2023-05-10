@@ -1,6 +1,10 @@
 .header {
-	padding: 52px 0;
+	padding: 24px 0;
 	background-color: $accent2;
+
+	@media all and (min-width: $lg) {
+		padding: 52px 0;
+	}
 
 	&-wrapper {
 		display: flex;
@@ -9,14 +13,28 @@
 	}
 
 	&-logo {
+		display: none;
 		transition: opacity ease $tr;
 
 		&:hover {
 			opacity: $op;
 		}
+
+		@media all and (min-width: $xl) {
+			display: block;
+		}
+
+		&_mobile {
+			display: block;
+
+			@media all and (min-width: $xl) {
+				display: none;
+			}
+		}
 	}
 
 	&-nav {
+		display: none;
 
 		&__item {
 			font-family: $ff;
@@ -30,10 +48,19 @@
 			font-feature-settings: 'pnum' on, 'lnum' on;
 			color: $blackened;
 			margin-right: 40px;
+			transition: color ease $tr;
 
 			&:last-child {
 				margin-right: 0;
 			}
+
+			&:hover {
+				color: $accent1;
+			}
+		}
+
+		@media all and (min-width: $lg) {
+			display: flex;
 		}
 	}
 }

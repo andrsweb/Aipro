@@ -17,4 +17,44 @@
 	&:hover {
 		opacity: $op;
 	}
+
+	&.button_header {
+		display: none;
+
+		@media all and (min-width: $lg) {
+			display: block;
+		}
+	}
+}
+
+.burger-button {
+	width: 24px;
+	height: 24px;
+	padding: 8.5px 3px;
+	position: relative;
+
+	& span {
+		position: absolute;
+		left: 0;
+		top: 7px;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: $black;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 7px;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $black;
+		}
+	}
+
+	@media all and (min-width: $lg) {
+		display: none;
+	}
 }
