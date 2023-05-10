@@ -17,11 +17,13 @@ h1, .h1 {
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: $blackened;
 	mix-blend-mode: normal;
-	margin-bottom: 40px;
+	margin-bottom: 35px;
+	text-align: center;
 
 	@media all and (min-width: $lg) {
 		font-size: 54px;
 		line-height: 59px;
+		text-align: left;
 	}
 }
 
