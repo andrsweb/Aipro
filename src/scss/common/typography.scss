@@ -37,6 +37,7 @@ h2, .h2 {
 	line-height: 44px;
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: $white;
+	margin-bottom: 39px;
 
 	@media all and (min-width: $lg) {
 		font-size: 54px;
