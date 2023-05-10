@@ -33,6 +33,12 @@ ul {
 	list-style: none
 }
 
+button {
+	border: 0;
+	border-style: none;
+	background-color: transparent;
+}
+
 .wrapper {
 	position: relative;
 	display: flex;
