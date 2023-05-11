@@ -1,0 +1,15 @@
+.experiment {
+	background-color: $blackened;
+	padding: 120px 0;
+
+	&__title {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 16px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $white;
+		margin-bottom: 40px;
+	}
+}
