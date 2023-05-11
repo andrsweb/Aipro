@@ -51,10 +51,19 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	font-size: $fs-xl;
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 20px;
+	line-height: 28px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $blackened;
+	max-width: 629px;
 
 	@media all and (min-width: $lg) {
-		font-size: 24px
+		font-size: 20px;
+		line-height: 28px;
+		margin-bottom: 120px;
 	}
 }
 
