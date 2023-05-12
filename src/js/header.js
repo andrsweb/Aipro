@@ -61,4 +61,14 @@ const toggleBurgerMenu = () => {
 		burgerButton.classList.remove( 'opened' )
 		enableBodyScroll( getTargetElement() )
 	} )
+
+	window.addEventListener( 'resize', () => {
+		const windowWidth = window.innerWidth
+		const WINDOW_WIDTH_MD = 768
+	
+		if( windowWidth >= WINDOW_WIDTH_MD &&  burgerMenu.classList.contains( 'opened' ) ) {
+			burgerMenu.classList.remove( 'opened' )
+			burgerButton.classList.remove( 'opened' )
+		}
+	} )
 }
