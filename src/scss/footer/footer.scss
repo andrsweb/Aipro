@@ -1,0 +1,48 @@
+.footer {
+	background-color: $accent2;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		border-top: 2px solid $blackened;
+		padding: 20px 0 40px;
+	}
+
+	&__links {
+
+	}
+
+	&__link {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-right: 34px;
+		transition: color ease $tr;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: $accent1;
+		}
+	}
+
+	&__license {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 12px;
+		line-height: 16px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-left: auto;
+	}
+}
