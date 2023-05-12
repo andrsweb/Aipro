@@ -36,6 +36,18 @@
 	&-nav {
 		display: none;
 
+		ul {
+			display: flex;
+		}
+
+		li {
+			margin-right: 40px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
 		&__item {
 			font-family: $ff;
 			font-style: normal;
@@ -46,13 +58,8 @@
 			letter-spacing: 0.02em;
 			text-transform: uppercase;
 			font-feature-settings: 'pnum' on, 'lnum' on;
-			color: $blackened;
-			margin-right: 40px;
+			color: $blackened;			
 			transition: color ease $tr;
-
-			&:last-child {
-				margin-right: 0;
-			}
 
 			&:hover {
 				color: $accent1;
