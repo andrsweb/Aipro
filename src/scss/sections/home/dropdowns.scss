@@ -1,14 +1,31 @@
 .questions {
 	background-color: $accent2;
-	padding: 120px 0;
+	padding: 60px 0;
+
+	@media all and (min-width: $lg) {
+		padding: 120px 0;
+	}
 
 	h2 {
 		color: $blackened;
+		margin-bottom: 40px;
+		font-size: 24px;
+		line-height: 32px;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 69px;
+			font-size: 54px;
+			line-height: 59px;
+		}
 	}
 }
 
 .dropdown {
-	margin-bottom: 56px;
+	margin-bottom: 18px;
+
+	@media all and (min-width: $lg) {
+		margin-bottom: 40px;
+	}
 
 	&:last-child {
 		margin-bottom: 0;
@@ -49,18 +66,22 @@
 			&::before {
 				content: "";
 				position: absolute;
-				top: 50%;
+				top: 0;
 				left: 0;
 				display: block;
 				width: 100%;
 				height: 3px;
 				background-color: $blackened;
+
+				@media all and (min-width: $md) {
+					top: 50%;
+				}
 			}
 
 			&::after {
 				content: "";
 				position: absolute;
-				top: 50%;
+				top: 0;
 				left: 0;
 				display: block;
 				width: 100%;
@@ -68,7 +89,23 @@
 				background-color: $blackened;
 				transform: rotate( -90deg );
 				transition: opacity ease $tr;
+
+				@media all and (min-width: $md) {
+					top: 50%;
+				}
 			}
+		}
+	}
+
+	&__start {
+		max-width: 259px;
+
+		@media all and (min-width: $sm) {
+			max-width: 350px;
+		}
+
+		@media all and (min-width: $lg) {
+			max-width: 100%;
 		}
 	}
 
