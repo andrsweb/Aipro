@@ -18,7 +18,7 @@ body {
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: $accent2
 }
 
 img {
@@ -45,7 +45,12 @@ button {
 	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
+	margin-top: 80px;
 	overflow: hidden;
+
+	@media all and (min-width: $lg) {
+		margin-top: 148px;
+	}
 
 	.footer {
 		margin-top: auto

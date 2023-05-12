@@ -22,8 +22,16 @@
 	&.button_header {
 		display: none;
 
-		@media all and (min-width: $lg) {
+		@media all and (min-width: $md) {
 			display: block;
+		}
+
+		&.header_mobile {
+			display: block;
+
+			@media all and (min-width: $md) {
+				display: none;
+			}
 		}
 	}
 
@@ -42,10 +50,18 @@
 }
 
 .burger-button {
+	cursor: pointer;
 	width: 24px;
 	height: 24px;
 	padding: 8.5px 3px;
 	position: relative;
+	z-index: 100;
+
+	&:hover span {
+		&::after {
+			transform: translateX( -5px );
+		}
+	}
 
 	& span {
 		position: absolute;
@@ -55,6 +71,7 @@
 		width: 100%;
 		height: 2px;
 		background-color: $black;
+		border-radius: 12px;
 
 		&::after {
 			content: "";
@@ -64,11 +81,38 @@
 			display: block;
 			width: 100%;
 			height: 2px;
+			border-radius: 12px;
 			background-color: $black;
+			transition: transform ease $tr;
 		}
 	}
 
-	@media all and (min-width: $lg) {
+	@media all and (min-width: $md) {
 		display: none;
+	}
+
+	&.opened {
+		animation:  rot 0.7s 1 cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+		@keyframes rot {
+			0% {
+				transform: rotate( 0 );
+			}
+
+			100% {
+				transform: rotate( 360deg);
+			}
+		}
+		span {
+			transform: rotate( -45deg );
+			top: 10px;
+			background: $accent1;
+		}
+
+		span::after {
+			background: $accent1;
+			transform: rotate( 90deg );
+			top: 0;
+		}
 	}
 }
