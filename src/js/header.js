@@ -69,6 +69,7 @@ const toggleBurgerMenu = () => {
 		if( windowWidth >= WINDOW_WIDTH_MD &&  burgerMenu.classList.contains( 'opened' ) ) {
 			burgerMenu.classList.remove( 'opened' )
 			burgerButton.classList.remove( 'opened' )
+			enableBodyScroll( getTargetElement() )
 		}
 	} )
 }
