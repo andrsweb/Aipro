@@ -1,0 +1,51 @@
+.strides {
+	background-color: $accent2;
+	padding-bottom: 60px;
+
+	@media all and (min-width: $md) {
+		padding: 60px 0;
+	}
+
+	h2 {
+		color: $blackened;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@media all and (min-width: $md) {
+			text-align: left;
+			margin-bottom: 50px;
+			max-width: 580px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			width: 50%;
+		}
+	}
+
+	&__img {
+		display: none;
+		justify-content: flex-end;
+		width: 50%;
+
+		@media all and (min-width: $md) {
+			display: flex;
+		}
+	}
+
+	.button__wrapper {
+		justify-content: center;
+
+		@media all and (min-width: $md) {
+			justify-content: flex-start;
+		}
+	}
+}
