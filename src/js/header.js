@@ -1,3 +1,6 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import { setTargetElement, getTargetElement } from './common/global'
+
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
@@ -24,6 +27,7 @@ const headerScroll = () => {
 const toggleBurgerMenu = () => {
 	const burgerButton  = document.querySelector( '.burger-button' )
 	const burgerMenu    = document.querySelector( '.header-wrapper' )
+	setTargetElement( document.querySelector( '#body-lock' ) )
 
 	if( ! burgerButton || ! burgerMenu ) return
 
@@ -34,16 +38,18 @@ const toggleBurgerMenu = () => {
 		if( ! burgerMenu.classList.contains( 'opened' ) ) {
 			burgerMenu.classList.add( 'opened' )
 			burgerButton.classList.add( 'opened' )
+			disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
 
 		} else {
 			burgerMenu.classList.remove( 'opened' )
 			burgerButton.classList.remove( 'opened' )
+			enableBodyScroll( getTargetElement() )
 		}
 	} )
 
 	document.addEventListener( 'click', e => {
 		e.stopPropagation()
-		target = e.target
+		const target = e.target
 
 		if (
 			! target.className ||
@@ -53,5 +59,6 @@ const toggleBurgerMenu = () => {
 
 		burgerMenu.classList.remove( 'opened' )
 		burgerButton.classList.remove( 'opened' )
+		enableBodyScroll( getTargetElement() )
 	} )
 }
