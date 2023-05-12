@@ -5,3 +5,6 @@ import './header'
 
 // Dropdowns for question section
 import './dropdowns'
+
+//signin scripts
+import './signin'

@@ -1,12 +1,12 @@
 .signin {
 	.footer {
-		padding: 20px 0 40px;
 		background-color: #F6F6F6;
 		
 		&__wrapper {
 			border: 0;
 			display: flex;
 			justify-content: center;
+			padding: 0 0 80px;
 		}
 
 		&__text, &__link {
