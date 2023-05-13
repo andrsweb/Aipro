@@ -1,3 +1,23 @@
+.login {
+	.signin__hero {
+		padding: 34px 0 50px;
+
+		@media all and (min-width: $md) {
+			padding: 120px 0 126px;
+		}
+
+		h1 {
+			margin-bottom: 20px;
+
+			@media all and (min-width: $md) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	
+}
+
 .signin__hero {
 	padding: 34px 0 50px;
 
@@ -187,5 +207,25 @@
 		@media all and (min-width: $md) {
 			margin: 13px 0 10px;
 		}
+	}
+}
+
+.forgot__password {
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $blackened;
+	cursor: pointer;
+	transition: opacity ease $tr;
+	margin: 12px 0 5px;
+
+	&:hover {
+		opacity: $op;
 	}
 }
