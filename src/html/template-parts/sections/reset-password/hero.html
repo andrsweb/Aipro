@@ -1,0 +1,26 @@
+<section class="signin__hero">
+	<div class="container">
+		<h1>
+			Reset password
+		</h1>
+		<form class="signin__hero_form">
+			<fieldset>
+				<label for="signin-email">
+					New password
+				</label>
+				<input class="signin__input" type="email" name="signin-email" id="signin-email">
+				<label for="signin-password">
+					Re-enter new password
+				</label>
+				<span class="input__wrapper">
+					<input class="signin__input last_input" type="password" name="signin-password" id="signin-password">
+					@@include( '../signin/eye.html' )
+					@@include( '../signin/eye-closed.html' )
+				</span>
+				<button class="signin-button submit_button">
+					Reset password
+				</button>
+			</fieldset>
+		</form>
+	</div>
+</section>
