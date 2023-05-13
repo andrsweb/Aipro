@@ -1,0 +1,191 @@
+.signin__hero {
+	padding: 34px 0 50px;
+
+	@media all and (min-width: $md) {
+		padding: 86px 0 126px;
+	}
+
+	.container {
+		max-width: 303px;
+
+		@media all and (min-width: $md) {
+			max-width: 412px;
+		}
+	}
+
+	h1 {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 24px;
+		line-height: 32px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		text-align: center;
+		margin-bottom: 22px;
+
+		@media all and (min-width: $md) {
+			font-size: 36px;
+			line-height: 44px;
+			margin-bottom: 32px;
+		}
+	}
+
+	&_stripe {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-top: 10px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			top: 50%;
+			background-color: $blackened;
+		}
+
+		&_wrapper {
+			width: 33px;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			z-index: 1;
+			background-color: #F6F6F6;
+			margin: 0 auto;
+		}
+
+		@media all and (min-width: $md) {
+			margin-top: 16px;
+		}
+	}
+
+	&_form {
+		margin-top: 2px;
+
+		fieldset {
+			display: flex;
+			flex-direction: column;
+			border: 0;
+			padding: 5px 5px;
+
+			label {
+				font-family: $ff-title;
+				font-style: normal;
+				font-weight: $fw-regular;
+				font-size: 12px;
+				line-height: 16px;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: #707070;
+				margin-bottom: 4px;
+			}
+
+			.signin__input {
+				width: 100%;
+				font-family: $ff-title;
+				font-style: normal;
+				font-weight: $fw-regular;
+				font-size: 14px;
+				line-height: 24px;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: $blackened;
+				padding: 12px 16px;
+				border: 1px solid #C5CACF;
+				border-radius: 24px;
+				background-color: $white;
+				margin-bottom: 6px;
+
+				&.last_input {
+					margin-bottom: 0;
+				}
+
+				@media all and (min-width: $md) {
+					margin-bottom: 15px;
+				}
+			}
+
+			.input__wrapper {
+				position: relative;
+
+				.input-img {
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					transform: translateY( -50% );
+					cursor: pointer;
+					transition: opacity ease $tr;
+
+					&:hover {
+						opacity: $op;
+					}
+
+					&.off {
+						display: none;
+					}
+				}
+			}
+		}
+
+		@media all and (min-width: $md) {
+			margin-top: 12px;
+		}
+	}
+
+	&_text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
+	}
+
+	&_link {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $accent1;
+		transition: opacity ease $tr;
+		margin-top: 5px;
+
+		@media all and (min-width: $md) {
+			margin-left: 8px;
+			margin-top: 0;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	.submit_button {
+		margin: 5px 0 5px;
+
+		@media all and (min-width: $md) {
+			margin: 13px 0 10px;
+		}
+	}
+}
