@@ -310,3 +310,32 @@
 	color: $blackened;
 	margin-bottom: 27px;
 }
+
+.recovery__email {
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $blackened;
+}
+
+.password-sent {
+	.button__wrapper {
+		margin-top: 40px;
+	}
+
+	.recovery__text {
+		margin-bottom: 8px;
+	}
+
+	.signin-button {
+		padding: 16px 32px;
+	}
+
+	h1 {
+		margin-bottom: 40px;
+	}
+}
