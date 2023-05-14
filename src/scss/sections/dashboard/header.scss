@@ -20,9 +20,9 @@
 			font-weight: $fw-bold;
 			font-size: 14px;
 			line-height: 24px;
-			text-align: center;
 			letter-spacing: 0.02em;
 			text-transform: uppercase;
+			text-align: center;
 			font-feature-settings: 'pnum' on, 'lnum' on;
 			color: $blackened;
 
@@ -38,21 +38,46 @@
 
 			&_post {
 				display: none;
-
-				@media all and (min-width: $md) {
-					display: block;
-				}
-			}
-
-			&_email {
-				display: flex;
-				align-items: center;
 				transition: opacity ease $tr;
 				cursor: pointer;
 
 				&:hover {
 					opacity: $op;
 				}
+
+				@media all and (min-width: $md) {
+					display: block;
+				}
+			}
+
+			&_menu_item {
+				font-family: $ff-title;
+				font-style: normal;
+				font-weight: $fw-regular;
+				font-size: 16px;
+				line-height: 24px;
+				text-align: left;
+				letter-spacing: 0.01em;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: $blackened;
+				margin-bottom: 8px;
+				cursor: pointer;
+				transition: color ease $tr;
+				text-transform: none;
+
+				&:hover {
+					color: $accent1;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&_email {
+				position: relative;
+				display: flex;
+				align-items: center;
 
 				&_img {
 					display: block;
@@ -61,10 +86,47 @@
 						display: none;
 					}
 				}
+
+				&.opened {
+					.header__account_email_menu {
+						display: flex;
+						animation: fade 1s ease forwards;
+
+						@keyframes fade {
+							0% {
+								opacity: 0;
+							}
+
+							100% {
+								opacity: 1;
+							}
+						}
+					}
+
+					.header__account_arrow {
+						transform: rotate( 180deg);
+					}
+				}
+
+				&_menu {
+					display: none;
+					width: 100%;
+					position: absolute;
+					top: 28px;
+					left: 0;
+					flex-direction: column;
+					align-items: flex-start;
+					border-top: 2px solid $blackened;
+					background-color: #F6F6F6;
+					box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+					padding: 24px 0 24px 32px;
+				}
 			}
 
 			&_arrow {
+				transition: transform ease $tr;
 				margin-left: 14px;
+				cursor: pointer;
 			}
 		}
 
