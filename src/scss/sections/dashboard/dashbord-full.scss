@@ -1,7 +1,11 @@
 .dashboard-full {
 
 	.dashboard__hero {
-		padding-top: 30px;
+		padding-top: 24px;
+
+		@media all and (min-width: $md) {
+			padding-top: 30px;
+		}
 
 		h1 {
 			margin: 0;
@@ -12,16 +16,22 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 2px solid $blackened;
-		padding-bottom: 40px;
+		padding-bottom: 25px;
+		margin-bottom: 22px;
+
+		@media all and (min-width: $md) {
+			padding-bottom: 40px;
+		}
 	}
 
 	.dashboard__row {
-		padding: 33px 0;
+		padding-bottom: 6px;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		justify-content: space-between;
 		border-bottom: 2px solid $blackened;
-		margin-bottom: 5px;
+		margin-bottom: 22px;
 	
 		&:last-child {
 			margin-bottom: 0;
@@ -29,16 +39,43 @@
 
 		.button.hero_button {
 			padding: 16px 14px;
+			display: flex;
+		}
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 33px 0;
+		}
+	}
+
+	.dashboard__col {
+		width: 100%;
+	}
+
+	.first_col, .second_col {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+
+		@media all and (min-width: $md) {
+			flex-direction: column;
+			align-items: flex-end;
 		}
 	}
 
 	.header-button {
-		display: flex;
+		display: none;
 		align-items: center;
 		padding: 8px 16px;
 
 		img {
 			margin-right: 10px;
+		}
+
+		@media all and (min-width: $md) {
+			display: flex;
 		}
 	}
 	
@@ -50,7 +87,11 @@
 		line-height: 28px;
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: $blackened;
-		margin-bottom: 15px;
+		margin-bottom: 5px;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 15px;
+		}
 	}
 	
 	.dashboard__desc {
@@ -61,6 +102,12 @@
 		line-height: 24px;
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: $blackened;
+		margin-bottom: 15px;
+
+
+		@media all and (min-width: $md) {
+			margin-bottom: 0;
+		}
 	
 		span {
 			margin: 0 8px;
@@ -98,6 +145,7 @@
 	}
 	
 	.dashboard__payment {
+		display: none;
 		font-family: $ff;
 		font-style: normal;
 		font-weight: $fw-bold;
@@ -109,6 +157,45 @@
 		color: $accent1;
 		text-align: right;
 		margin: 10px 0;
+
+		@media all and (min-width: $md) {
+			display: block;
+		}
+	}
+
+	.button__wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	.dashboard__mob-btn {
+		display: block;
+		width: 100%;
+		margin: 132px auto 0 auto;
+
+		@media all and (min-width: $sm) {
+			width: 50%;
+		}
+
+		@media all and (min-width: $md) {
+			display: none;
+		}
+	}
+
+	.dashboard__desktop-btn {
+		display: none;
+
+		@media all and (min-width: $md) {
+			display: block;
+		}
+	}
+
+	.download {
+		display: block;
+
+		@media all and (min-width: $md) {
+			display: none;
+		}
 	}
 }
 
