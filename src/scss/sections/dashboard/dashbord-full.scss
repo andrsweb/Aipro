@@ -1,0 +1,127 @@
+.dashboard-full {
+
+	.dashboard__hero {
+		padding-top: 30px;
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	.dashboard__title {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 2px solid $blackened;
+		padding-bottom: 40px;
+	}
+
+	.dashboard__row {
+		padding: 33px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 2px solid $blackened;
+		margin-bottom: 5px;
+	
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.button.hero_button {
+			padding: 16px 14px;
+		}
+	}
+
+	.header-button {
+		display: flex;
+		align-items: center;
+		padding: 8px 16px;
+
+		img {
+			margin-right: 10px;
+		}
+	}
+	
+	.dashboard__project_name {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 20px;
+		line-height: 28px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 15px;
+	}
+	
+	.dashboard__desc {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+	
+		span {
+			margin: 0 8px;
+		}
+	}
+	
+	.dashboard__progress {
+		display: flex;
+		align-items: center;
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 12px;
+		line-height: 16px;
+		text-align: right;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		color: $blackened;
+		margin-bottom: 22px;
+	
+		img {
+			margin-left: 13px;
+		}
+	}
+	
+	.dashboard__date {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: right;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #707070;
+	}
+	
+	.dashboard__payment {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $accent1;
+		text-align: right;
+		margin: 10px 0;
+	}
+}
+
+.small-loader {
+	animation: rotate 1s linear infinite;
+
+	@keyframes rotate {
+		0% {
+			transform: rotate( 0 );
+		}
+
+		100% {
+			transform: rotate( 360deg );
+		}
+	}
+}
