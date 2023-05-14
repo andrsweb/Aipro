@@ -76,6 +76,11 @@
 		opacity: $op;
 	}
 
+	&.delete_button {
+		background-color: #F02215;
+		color: $white;
+	}
+
 	&.submit_button {
 		background-color: $accent1;
 		text-align: center;

@@ -1,0 +1,70 @@
+.dashboard__settings {
+	display: none;
+
+	h2 {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 36px;
+		line-height: 44px;
+		text-align: left;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 40px;
+	}
+
+	&_title {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 24px;
+		line-height: 32px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 8px;
+	}
+
+	&_desc {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #707070;
+		margin-bottom: 36px;
+	}
+
+	form {
+		fieldset {
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	&_items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&_item {
+		display: flex;
+		flex-direction: column;
+		max-width: 261px;
+		margin-right: 118px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	button {
+		margin-top: auto;
+	}
+
+	.signin-button {
+		padding: 16px 32px;
+		max-width: 261px;
+		white-space: nowrap;
+	}
+}

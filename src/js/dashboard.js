@@ -2,6 +2,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
 	showHiddenWindow()
+	showSettings()
 } )
 
 const showHiddenWindow = () => {
@@ -19,4 +20,21 @@ const showHiddenWindow = () => {
 			}
 		} )
 	} )
+}
+
+const showSettings = () => {
+	const settings           = document.querySelector( '.account_settings' )
+	const projects           = document.querySelector( '.dashboard__projects' )
+	const dashboardsSettings = document.querySelector( '.dashboard__settings' )
+
+	if( ! settings ) return
+
+	settings.addEventListener( 'click', () => {
+		projects.style = 'display: none'
+		dashboardsSettings.style = 'display: block'
+	} )
+}
+
+const upDateEmail = () => {
+	const button = document.querySelector( '.update_email')
 }
