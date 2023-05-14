@@ -2,7 +2,11 @@
 	.header {
 		background-color: #F6F6F6;
 		padding: 24px 0;
-		position: static;
+		position: relative;
+
+		@media all and (min-width: $md) {
+			position: static;
+		}
 
 		@media all and (min-width: $lg) {
 			padding: 33px 0;
@@ -28,22 +32,12 @@
 
 			&_help {
 				margin-right: 40px;
-				transition: opacity ease $tr;
 				cursor: pointer;
-
-				&:hover {
-					opacity: $op;
-				}
 			}
 
 			&_post {
 				display: none;
-				transition: opacity ease $tr;
 				cursor: pointer;
-
-				&:hover {
-					opacity: $op;
-				}
 
 				@media all and (min-width: $md) {
 					display: block;
@@ -75,12 +69,16 @@
 			}
 
 			&_email {
-				position: relative;
 				display: flex;
 				align-items: center;
 
+				@media all and (min-width: $md) {
+					position: relative;
+				}
+
 				&_img {
 					display: block;
+					cursor: pointer;
 
 					@media all and (min-width: $md) {
 						display: none;
@@ -112,7 +110,7 @@
 					display: none;
 					width: 100%;
 					position: absolute;
-					top: 28px;
+					top: 80px;
 					left: 0;
 					flex-direction: column;
 					align-items: flex-start;
@@ -120,6 +118,11 @@
 					background-color: #F6F6F6;
 					box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
 					padding: 24px 0 24px 32px;
+
+					@media all and (min-width: $md) {
+						top: 28px;
+						left: 0;
+					}
 				}
 			}
 
