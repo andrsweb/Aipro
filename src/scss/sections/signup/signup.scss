@@ -1,0 +1,25 @@
+.signup {
+	.signin__hero {
+		padding: 34px 0 50px;
+	
+		@media all and (min-width: $md) {
+			padding: 148px 0 126px;
+		}
+
+		.signin__input {
+			margin-bottom: 3px;
+		}
+
+		.signin-button {
+			font-size: 10px;
+
+			@media all and (min-width: $sm) {
+				font-size: 12px;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 16px;
+			}
+		}
+	}
+}
