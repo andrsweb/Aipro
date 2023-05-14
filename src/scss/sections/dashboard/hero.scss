@@ -22,6 +22,10 @@
 				margin-bottom: 40px;
 			}
 
+			&_wrapper {
+				display: flex;
+			}
+
 			&_inner {
 				max-width: 356px;
 			}
@@ -49,9 +53,12 @@
 			}
 
 			&_img {
-				position: absolute;
-				bottom: 0;
-				right: 20vw;
+				height: 100%;
+				width: calc( 100% - 356px);
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				padding-top: 134px;
 			}
 		}
 }
