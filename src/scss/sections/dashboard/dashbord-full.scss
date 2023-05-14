@@ -32,6 +32,7 @@
 		justify-content: space-between;
 		border-bottom: 2px solid $blackened;
 		margin-bottom: 22px;
+		padding-bottom: 27px;
 	
 		&:last-child {
 			margin-bottom: 0;
@@ -116,6 +117,7 @@
 	
 	.dashboard__progress {
 		display: flex;
+		justify-content: flex-end;
 		align-items: center;
 		font-family: $ff;
 		font-style: normal;
@@ -126,7 +128,11 @@
 		letter-spacing: 0.5px;
 		text-transform: uppercase;
 		color: $blackened;
-		margin-bottom: 22px;
+		width: 50%;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 22px;
+		}
 	
 		img {
 			margin-left: 13px;
@@ -136,12 +142,17 @@
 	.dashboard__date {
 		font-family: $ff-title;
 		font-style: normal;
+		text-align: left;
 		font-weight: $fw-regular;
 		font-size: 14px;
 		line-height: 24px;
-		text-align: right;
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: #707070;
+		width: 50%;
+
+		@media all and (min-width: $md) {
+			text-align: right;
+		}
 	}
 	
 	.dashboard__payment {
@@ -171,7 +182,7 @@
 	.dashboard__mob-btn {
 		display: block;
 		width: 100%;
-		margin: 132px auto 0 auto;
+		margin: 95px auto 32px auto;
 
 		@media all and (min-width: $sm) {
 			width: 50%;
@@ -192,6 +203,12 @@
 
 	.download {
 		display: block;
+		cursor: pointer;
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
 
 		@media all and (min-width: $md) {
 			display: none;
