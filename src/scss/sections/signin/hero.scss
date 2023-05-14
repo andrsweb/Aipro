@@ -16,75 +16,6 @@
 	}
 }
 
-.recovery {
-	.signin__hero {
-		padding: 34px 0 50px;
-
-		@media all and (min-width: $md) {
-			padding: 160px 0 126px;
-		}
-
-		h1 {
-			margin-bottom: 10px;
-
-			@media all and (min-width: $md) {
-				margin-bottom: 15px;
-			}
-		}
-
-		.container {
-			max-width: 440px;
-		}
-
-		.signin__input {
-			margin-bottom: 3px;
-		}
-
-		.signin-button {
-			margin: 12px 0 0;
-			font-size: 10px;
-
-			@media all and (min-width: $sm) {
-				font-size: 12px;
-			}
-
-			@media all and (min-width: $md) {
-				font-size: 16px;
-			}
-		}
-	}
-
-	form {
-		padding: 0 15px;
-	}
-}
-
-.signup {
-	.signin__hero {
-		padding: 34px 0 50px;
-	
-		@media all and (min-width: $md) {
-			padding: 148px 0 126px;
-		}
-
-		.signin__input {
-			margin-bottom: 3px;
-		}
-
-		.signin-button {
-			font-size: 10px;
-
-			@media all and (min-width: $sm) {
-				font-size: 12px;
-			}
-
-			@media all and (min-width: $md) {
-				font-size: 16px;
-			}
-		}
-	}
-}
-
 .signin__hero {
 	padding: 34px 0 50px;
 
@@ -309,4 +240,15 @@
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: $blackened;
 	margin-bottom: 27px;
+}
+
+.recovery__email {
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $blackened;
 }
