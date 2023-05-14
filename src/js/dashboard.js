@@ -5,11 +5,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const showHiddenWindow = () => {
+	const accountPost = document.querySelector( '.header__account_post' )
 	const accountEmail = document.querySelector( '.header__account_email' )
 
 	if ( ! accountEmail ) return
 
-	accountEmail.addEventListener( 'click', () => {
+	accountPost.addEventListener( 'click', () => {
 		if( ! accountEmail.classList.contains( 'opened') ) {
 			accountEmail.classList.add( 'opened' ) 
 		} else {
