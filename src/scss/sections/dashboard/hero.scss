@@ -6,7 +6,11 @@
 		}
 
 		&__hero {
-			padding-top: 32px;
+			padding-top: 25px;
+
+			@media all and (min-width: $md) {
+				padding-top: 32px;
+			}
 
 			.container {
 				max-width: 1150px;
@@ -16,18 +20,34 @@
 				font-family: $ff;
 				font-style: normal;
 				font-weight: $fw-bold;
-				font-size: 36px;
-				line-height: 44px;
+				font-size: 24px;
+				line-height: 32px;
 				font-feature-settings: 'pnum' on, 'lnum' on;
-				margin-bottom: 40px;
+				margin-bottom: 24px;
+				text-align: left;
+
+				@media all and (min-width: $md) {
+					font-size: 36px;
+					line-height: 44px;
+					margin-bottom: 40px;
+				}
 			}
 
 			&_wrapper {
 				display: flex;
+				flex-direction: column;
+
+				@media all and (min-width: $md) {
+					flex-direction: row;
+				}
 			}
 
 			&_inner {
-				max-width: 356px;
+				max-width: 264px;
+
+				@media all and (min-width: $sm) {
+					min-width: 356px;
+				}
 			}
 
 			&_no-post {
@@ -53,12 +73,26 @@
 			}
 
 			&_img {
-				height: 100%;
-				width: calc( 100% - 356px);
 				display: flex;
 				align-items: flex-end;
 				justify-content: flex-end;
-				padding-top: 134px;
+				margin-top: 85px;
+
+				img {
+					width: 175px;
+					height: 175px;
+
+					@media all and (min-width: $md) {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				@media all and (min-width: $md) {
+					width: calc( 100% - 356px);
+					padding-top: 134px;
+					margin-top: 0;
+				}
 			}
 		}
 }

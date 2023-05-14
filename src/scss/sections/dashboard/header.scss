@@ -1,8 +1,12 @@
 .dashboard {
 	.header {
 		background-color: #F6F6F6;
-		padding: 33px 0;
+		padding: 24px 0;
 		position: static;
+
+		@media all and (min-width: $lg) {
+			padding: 33px 0;
+		}
 
 		.container {
 			max-width: 1150px;
@@ -32,6 +36,14 @@
 				}
 			}
 
+			&_post {
+				display: none;
+
+				@media all and (min-width: $md) {
+					display: block;
+				}
+			}
+
 			&_email {
 				display: flex;
 				align-items: center;
@@ -40,6 +52,14 @@
 
 				&:hover {
 					opacity: $op;
+				}
+
+				&_img {
+					display: block;
+
+					@media all and (min-width: $md) {
+						display: none;
+					}
 				}
 			}
 
