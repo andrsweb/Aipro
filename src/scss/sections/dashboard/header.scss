@@ -1,0 +1,52 @@
+.dashboard {
+	.header {
+		background-color: #F6F6F6;
+		padding: 33px 0;
+
+		.container {
+			max-width: 1150px;
+		}
+
+		&__account {
+			display: flex;
+			align-items: center;
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 14px;
+			line-height: 24px;
+			text-align: center;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+
+			&_help {
+				margin-right: 40px;
+				transition: opacity ease $tr;
+				cursor: pointer;
+
+				&:hover {
+					opacity: $op;
+				}
+			}
+
+			&_email {
+				display: flex;
+				align-items: center;
+				transition: opacity ease $tr;
+				cursor: pointer;
+
+				&:hover {
+					opacity: $op;
+				}
+			}
+
+			&_arrow {
+				margin-left: 14px;
+			}
+		}
+
+
+	}
+}
