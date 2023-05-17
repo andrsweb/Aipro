@@ -1,50 +1,50 @@
-document.addEventListener( 'DOMContentLoaded',  () => {
-    'use strict'
+document.addEventListener('DOMContentLoaded', () => {
+	'use strict'
 
-    toogleDropdown()
-} )
+	toogleDropdown()
+})
 
 const toogleDropdown = () => {
-    const dropdowns = document.querySelectorAll( '.dropdown' )
+	const dropdowns = document.querySelectorAll('.dropdown')
 
-    if ( ! dropdowns.length ) return
+	if (!dropdowns.length) return
 
-	dropdowns.forEach( dropdown => {
-		if ( dropdown.classList.contains( 'opened' ) )
-			reCalculateDropdownHeight( dropdown )
-	} )
+	dropdowns.forEach(dropdown => {
+		if (dropdown.classList.contains('opened'))
+			reCalculateDropdownHeight(dropdown)
+	})
 
-    dropdowns.forEach( dropdown => {
-        dropdown.addEventListener( 'click', () => {
-            const dropdownOpen = dropdown.querySelector( '.dropdown__open' )
+	dropdowns.forEach(dropdown => {
+		dropdown.addEventListener('click', () => {
+			const dropdownOpen = dropdown.querySelector('.dropdown__open')
 
-            if ( ! dropdownOpen ) return
+			if (!dropdownOpen) return
 
-            if ( ! dropdown.classList.contains( 'opened' ) ) {
-                dropdown.classList.add( 'opened' )
-                reCalculateDropdownHeight( dropdown )
-            }
-            else {
-                dropdown.classList.remove( 'opened' )
-                dropdownOpen.style.height = '0'
-            }
-        })
-    })
+			if (!dropdown.classList.contains('opened')) {
+				dropdown.classList.add('opened')
+				reCalculateDropdownHeight(dropdown)
+			}
+			else {
+				dropdown.classList.remove('opened')
+				dropdownOpen.style.height = '0'
+			}
+		})
+	})
 }
 
 window.addEventListener('resize', () => {
-    const dropdowns = document.querySelectorAll( '.dropdown.opened' )
+	const dropdowns = document.querySelectorAll('.dropdown.opened')
 
-    if( ! dropdowns.length ) return
+	if (!dropdowns.length) return
 
-    dropdowns.forEach( dropdown => reCalculateDropdownHeight( dropdown ) )
+	dropdowns.forEach(dropdown => reCalculateDropdownHeight(dropdown))
 })
 
 const reCalculateDropdownHeight = dropdown => {
-    const dropdownOpen  = dropdown.querySelector( '.dropdown__open' ),
-        dropdownInner   = dropdown.querySelector( '.dropdown__inner' )
+	const dropdownOpen = dropdown.querySelector('.dropdown__open'),
+		dropdownInner = dropdown.querySelector('.dropdown__inner')
 
-    if (! dropdownOpen || ! dropdownInner) return
+	if (!dropdownOpen || !dropdownInner) return
 
-    dropdownOpen.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
+	dropdownOpen.style.height = `${dropdownInner.getBoundingClientRect().height}px`
 }
