@@ -53,7 +53,7 @@
 	font-family: $ff;
 	font-style: normal;
 	font-weight: $fw-bold;
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 16px;
 	display: flex;
 	align-items: center;
@@ -66,6 +66,7 @@
 	border-radius: 40px;
 	padding: 13px 34px;
 	cursor: pointer;
+	white-space: nowrap;
 	transition: opacity ease $tr;
 
 	img {
@@ -74,6 +75,11 @@
 
 	&:hover {
 		opacity: $op;
+	}
+
+	&.delete_button {
+		background-color: #F02215;
+		color: $white;
 	}
 
 	&.submit_button {

@@ -96,41 +96,6 @@
 			border: 0;
 			padding: 5px 5px;
 
-			label {
-				font-family: $ff-title;
-				font-style: normal;
-				font-weight: $fw-regular;
-				font-size: 12px;
-				line-height: 16px;
-				font-feature-settings: 'pnum' on, 'lnum' on;
-				color: #707070;
-				margin-bottom: 4px;
-			}
-
-			.signin__input {
-				width: 100%;
-				font-family: $ff-title;
-				font-style: normal;
-				font-weight: $fw-regular;
-				font-size: 14px;
-				line-height: 24px;
-				font-feature-settings: 'pnum' on, 'lnum' on;
-				color: $blackened;
-				padding: 12px 16px;
-				border: 1px solid #C5CACF;
-				border-radius: 24px;
-				background-color: $white;
-				margin-bottom: 6px;
-
-				&.last_input {
-					margin-bottom: 0;
-				}
-
-				@media all and (min-width: $md) {
-					margin-bottom: 15px;
-				}
-			}
-
 			.input__wrapper {
 				position: relative;
 
@@ -251,4 +216,49 @@
 	text-align: center;
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: $blackened;
+}
+
+label {
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-regular;
+	font-size: 12px;
+	line-height: 16px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #707070;
+	margin-bottom: 4px;
+}
+
+.signin__input {
+	width: 100%;
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-regular;
+	font-size: 14px;
+	line-height: 24px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $blackened;
+	padding: 12px 16px;
+	border: 1px solid #C5CACF;
+	border-radius: 24px;
+	background-color: $white;
+	margin-bottom: 6px;
+
+	&.last_input {
+		margin-bottom: 0;
+	}
+
+	@media all and (min-width: $md) {
+		margin-bottom: 15px;
+	}
+
+	&::placeholder {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+	}
 }

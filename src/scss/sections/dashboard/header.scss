@@ -1,4 +1,4 @@
-.dashboard {
+.dashboard, .dashboard-full {
 	.header {
 		background-color: #F6F6F6;
 		padding: 24px 0;
@@ -36,11 +36,27 @@
 			}
 
 			&_post {
-				display: none;
+				display: block;
 				cursor: pointer;
 
 				@media all and (min-width: $md) {
 					display: block;
+				}
+
+				&.mobile_post {
+					display: block;
+
+					@media all and (min-width: $md) {
+						display: none;
+					}
+				}
+
+				&.desktop_post {
+					display: none;
+
+					@media all and (min-width: $md) {
+						display: block;
+					}
 				}
 			}
 
@@ -129,7 +145,6 @@
 			&_arrow {
 				transition: transform ease $tr;
 				margin-left: 14px;
-				cursor: pointer;
 			}
 		}
 
