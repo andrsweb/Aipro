@@ -48,21 +48,6 @@
 			justify-content: center;
 			margin-bottom: 40px;
 			width: 100%;
-			position: relative;
-
-			img {
-				position: fixed;
-				left: 0;
-				top: 0;
-
-				@media all and (min-width: $md) {
-					position: static;
-				}
-			}
-
-			@media all and (min-width: $md) {
-				position: static;
-			}
 
 			@media all and (min-width: $lg) {
 				justify-content: flex-start;
@@ -73,7 +58,7 @@
 			&.off {
 				display: none;
 
-				@media all and (min-width: $md) {
+				@media all and (min-width: $sm) {
 					display: block;
 				}
 			}
@@ -95,6 +80,7 @@
 		}
 
 		&_title {
+			display: flex;
 			font-family: $ff;
 			font-style: normal;
 			font-weight: $fw-bold;

@@ -11,3 +11,6 @@ import './signin'
 
 //dashboard scripts
 import './dashboard'
+
+//popups
+import './popups'
