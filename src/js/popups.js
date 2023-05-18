@@ -1,7 +1,8 @@
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
-	showPopup( '.delete_button', '.popup__wrapper' )
+	showPopup( '.delete_button', '.popup__wrapper.delete_popup' )
+	showPopup( '.change_password', '.popup__wrapper.password_popup' )
 } )
 
 const showPopup = ( button, wrapper ) => {

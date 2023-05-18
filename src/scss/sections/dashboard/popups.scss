@@ -149,3 +149,36 @@
 		display: block;
 	}
 }
+
+.popup__wrapper.password_popup {
+		fieldset {
+			border: 0;
+			padding: 0;
+			margin-bottom: 32px;
+		}
+
+		.popup_title {
+			width: 100%;
+			text-align: left;
+		}
+
+		.signin__input {
+			margin-bottom: 16px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.save_password {
+			font-size: 12px;
+			line-height: 16px;
+			max-width: 158px;
+			padding: 12px 20px;
+			margin-right: 8px;
+		}
+
+		.cancel_button {
+			padding: 10px 14px;
+		}
+}

@@ -7,13 +7,7 @@
 			Here are 5 steps to generate content. This guide is detailed and maybe seems long to complete, but in practice, it takes X minutes to create a top-notch article or any other piece of content
 		</h4>
 		<div class="content__items">
-			@@loop( './content-item.html', [
-				{ 'src': 'img/content/1.png', 'class': '', 'num': '1.', 'title': 'Create a post', 'text': 'Press <span>“Сreate post”</span> to start generating' },
-				{ 'src': 'img/content/2.png', 'class': 'off', 'num': '2.', 'title': 'Text setup', 'text': 'Give a context, choose text parameters. Then enter a number that defines text length and press <span>“Generate text”</span>' },
-				{ 'src': 'img/content/3.png', 'class': 'off', 'num': '3.', 'title': 'Select from offered options', 'text': 'You’ll receive <span>3 options for the text</span>. Choose the one you want to proceed with' },
-				{ 'src': 'img/content/4.png', 'class': 'off', 'num': '4.', 'title': 'Images setup', 'text': 'Enter the keywords and choose the number of images. Also, select the format. Press <span>“Generate images”</span>' },
-				{ 'src': 'img/content/5.png', 'class': 'off', 'num': '5.', 'title': 'Payment', 'text': 'If all is Ok, fill in your card details and pay for the content. After this, you’ll receive <span>full-scale images and whole text</span>' }
-			] )
+			@@include( './content-items.html' )
 		</div>
 	</div>
 </section>

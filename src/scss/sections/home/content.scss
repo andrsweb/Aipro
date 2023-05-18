@@ -11,6 +11,24 @@
 		margin-bottom: 24px;
 	}
 
+	&__img_wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 40px;
+		position: static;
+
+		&.scrolled {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+		@media all and (min-width: $md) {
+			display: none;
+		}
+	}
+
 	&__items {
 		display: flex;
 		flex-direction: column;
@@ -58,7 +76,7 @@
 			&.off {
 				display: none;
 
-				@media all and (min-width: $sm) {
+				@media all and (min-width: $md) {
 					display: block;
 				}
 			}
