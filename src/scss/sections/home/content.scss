@@ -18,12 +18,6 @@
 		margin-bottom: 40px;
 		position: static;
 
-		&.scrolled {
-			position: fixed;
-			top: 0;
-			left: 0;
-		}
-
 		@media all and (min-width: $md) {
 			display: none;
 		}
@@ -32,6 +26,16 @@
 	&__items {
 		display: flex;
 		flex-direction: column;
+
+		&.scrolled {
+			padding-top: 352px;
+
+			.content__img_wrapper {
+				position: fixed;
+				top: 60px;
+				left: 0;
+			}
+		}
 	}
 
 	&__item {

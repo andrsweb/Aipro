@@ -1,40 +1,48 @@
-// import { isInScope } from './common/global'
+document.addEventListener('DOMContentLoaded', () => {
+	'use strict'
 
-// document.addEventListener( 'DOMContentLoaded', () => {
-// 	'use strict'
+	checkWindowSize()
+})
 
-// 	checkWindowSize()
-// } )
+// resize func
+const checkWindowSize = () => {
+	if (window.innerWidth <= 767) document.body.classList.add('mobile')
+	else document.body.classList.remove('mobile')
+}
 
-// // resize func
-// const checkWindowSize = () => {
-// 	if( window.innerWidth <= 767 ) document.body.classList.add( 'mobile' )
-// 	else document.body.classList.remove( 'mobile' )
-// }
+window.addEventListener('resize', () => {
+	checkWindowSize()
+})
 
-// window.addEventListener( 'resize', () => {
-// 	checkWindowSize()
-// } )
+// Scroll
+window.addEventListener('scroll', () => {
+	const
+		steps = document.querySelectorAll('.content__item'),
+		imgFixed = document.querySelector('.img__fixed_mobile'),
+		source = document.querySelector('.content__img_wrapper picture source'),
+		content = document.querySelector('.content__items'),
+		contentTop = content.getBoundingClientRect().top,
+		contentBot = content.getBoundingClientRect().bottom
 
-// // Scroll
-// window.addEventListener( 'scroll', () => {
-// 	const 
-// 		steps         = document.querySelectorAll( '.content__item' ),
-// 		imgFixed      = document.querySelector( '.img__fixed_mobile' ),
-// 		source        = document.querySelector( '.content__img_wrapper picture source' ),
-// 		imgWrapper    = document.querySelector( '.content__img_wrapper' )
+	if (!steps.length || !imgFixed || !document.body.classList.contains('mobile') || ! content) return
 
-// 		if( ! steps.length || ! imgFixed || ! document.body.classList.contains( 'mobile' ) ) return
+	if (contentTop <= document.querySelector( '.header').offsetHeight) {
+		content.classList.add('scrolled')
+	
+		if (contentBot <= 360) {
+			content.classList.remove('scrolled')
+		} 
 
-// 		steps.forEach( step => {
-// 			const viewportOffsetY = step.getBoundingClientRect().top
-// 			const wrapperTop      = imgWrapper.getBoundingClientRect().top
-// 			const wrapperBot      = imgWrapper.getBoundingClientRect().bottom
+	} else {
+		content.classList.remove('scrolled')
+	}
 
-// 			if( viewportOffsetY <= 312 ) {
-// 				imgFixed.src = step.querySelector( 'img').src
-// 				source.srcset = step.querySelector( 'img' ).src
-// 				imgWrapper.classList.add( 'scrolled' )
-// 			}
-// 		} )
-// } )
+	steps.forEach(step => {
+		const viewportOffsetY = step.getBoundingClientRect().top
+
+		if (viewportOffsetY <= 380) {
+			imgFixed.src = step.querySelector('img').src
+			source.srcset = step.querySelector('img').src
+		}
+	})
+})
