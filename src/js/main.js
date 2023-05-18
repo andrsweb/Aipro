@@ -2,6 +2,7 @@ import './common/common'
 
 // Header scripts
 import './header'
+import './forAnchors'
 
 // Dropdowns for question section
 import './dropdowns'
