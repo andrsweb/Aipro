@@ -55,7 +55,8 @@
 					display: none;
 
 					@media all and (min-width: $md) {
-						display: block;
+						display: flex;
+						align-items: center;
 					}
 				}
 			}
