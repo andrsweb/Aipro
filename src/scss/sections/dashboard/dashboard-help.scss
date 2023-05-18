@@ -24,6 +24,7 @@
 			line-height: 32px;
 			font-feature-settings: 'pnum' on, 'lnum' on;
 			color: $blackened;
+			text-transform: none;
 		}
 
 		&__support {
@@ -51,7 +52,7 @@
 			font-feature-settings: 'pnum' on, 'lnum' on;
 			color: $blackened;
 			margin-top: 30px;
-			margin-bottom: 68px;
+			margin-bottom: 64px;
 			text-align: left;
 		}
 	}
