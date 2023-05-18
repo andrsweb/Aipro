@@ -28,7 +28,7 @@ const showSettings = () => {
 	const projects = document.querySelector('.dashboard__projects')
 	const dashboardsSettings = document.querySelector('.dashboard__settings')
 
-	if (!settings) return
+	if (!settings && !projects && !dashboardsSettings) return
 
 	settings.addEventListener('click', () => {
 		projects.style = 'display: none'
@@ -40,10 +40,10 @@ const upDateEmail = () => {
 	const button = document.querySelector('.update_email')
 	const notification = document.querySelector('.dashboard__notification')
 
-	if( ! button ) return
+	if (!button) return
 
 	button.addEventListener('click', () => {
-			if (!notification.classList.contains('updated')) {
+		if (!notification.classList.contains('updated')) {
 			notification.classList.add('updated')
 		}
 
