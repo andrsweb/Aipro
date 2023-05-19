@@ -1,0 +1,40 @@
+.signin, .signup, .reset-password {
+	.footer {
+		background-color: #F6F6F6;
+		
+		&__wrapper {
+			border: 0;
+			display: flex;
+			justify-content: center;
+			padding: 0 0 80px;
+		}
+
+		&__text, &__link {
+			font-family: $ff-title;
+			font-style: normal;
+			font-weight: $fw-regular;
+			font-size: 12px;
+			line-height: 16px;
+			text-align: center;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+		}
+
+		&__link {
+			color: $accent1;
+			text-transform: none;
+			margin-right: 0;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
+		}
+	}
+}
+
+.login, .recovery, .reset-password, .password-sent {
+	.footer {
+		display: none;
+	}
+}

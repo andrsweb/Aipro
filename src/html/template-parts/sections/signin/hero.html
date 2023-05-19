@@ -1,0 +1,40 @@
+<section class="signin__hero">
+	<div class="container">
+		<h1>
+			Create an account
+		</h1>
+		<div class="button__wrapper">
+			<button class="signin-button">
+				<img src="img/signin/google.png" width="24" height="24" alt="">
+				Sign in with Google
+			</button>
+		</div>
+		<div class="signin__hero_stripe">
+			<div class="signin__hero_stripe_wrapper">
+				Or
+			</div>
+		</div>
+		<form class="signin__hero_form">
+			<fieldset>
+				<label for="signin-email">
+					Email
+				</label>
+				<input class="signin__input" type="email" name="signin-email" id="signin-email">
+				<label for="signin-password">
+					Password
+				</label>
+				<span class="input__wrapper">
+					<input class="signin__input last_input" type="password" name="signin-password" id="signin-password">
+					@@include( './eye.html' )
+					@@include( './eye-closed.html' )
+				</span>
+				<button class="signin-button submit_button">
+					Create account
+				</button>
+			</fieldset>
+			<p class="signin__hero_text">
+				Already have an account? <a class="signin__hero_link" href="login.html">log in</a>
+			</p>
+		</form>
+	</div>
+</section>

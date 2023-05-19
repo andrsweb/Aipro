@@ -1,0 +1,184 @@
+.popup__wrapper {
+	position:fixed;
+	display:none;
+	align-items:center;
+	justify-content:center;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index: 200;
+	overflow-y: auto;
+	padding: 20px;
+	background: rgba(34, 34, 34, 0.6);
+	backdrop-filter: blur(4px);
+
+	&.showed {
+		display: flex;
+	}
+
+	.popup {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		margin: auto 0;
+		background: $white;
+		width: 100%;
+		max-width: 440px;
+		border-radius: 40px;
+
+		@media all and (min-width: $lg) {
+			padding: 32px;
+		}
+	}
+
+	.popup_close {
+		position: absolute;
+		right: 33px;
+		top: 32px;
+		width: 18px;
+		height: 18px;
+		cursor: pointer;
+		transition: opacity ease $tr;
+
+		@media all and (min-width: $lg) {
+			top: 44px;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+
+		span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: $black;
+			transform: rotate( 45deg );
+
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: $black;
+				transform: rotate( -90deg );
+			}
+		}
+	}
+
+	.popup-items {
+		display: flex;
+		align-items: center;
+	}
+
+	.popup-info {
+		max-width: 230px;
+		margin-right: 60px;
+	}
+
+	.popup_title {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 20px;
+		line-height: 28px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 32px;
+		padding-right: 15%;
+	}
+
+	.popup_text {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #707070;
+		margin-bottom: 32px;
+	}
+
+	.popup-btn {
+		cursor: pointer;
+		border: 0;
+		border-style: 0;
+		font-weight: $fw-regular;
+		background: $white;
+		font-size: 12px;
+		line-height: 20px;
+		color: $blackened;
+		height: 47px;
+		width: 100%;
+		max-width: 212px;
+		transition: opacity ease $tr;
+
+		@media all and (min-width: $md) {
+			font-size: 15px;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	.popup__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
+		@media all and (min-width: $lg) {
+			justify-content: flex-start;
+		}
+	}
+
+	.delete_button {
+		margin-right: 8px;
+		max-width: 168px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.button_header {
+		display: block;
+	}
+}
+
+.popup__wrapper.password_popup {
+		fieldset {
+			border: 0;
+			padding: 0;
+			margin-bottom: 32px;
+		}
+
+		.popup_title {
+			width: 100%;
+			text-align: left;
+		}
+
+		.signin__input {
+			margin-bottom: 16px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.save_password {
+			font-size: 12px;
+			line-height: 16px;
+			max-width: 158px;
+			padding: 12px 20px;
+			margin-right: 8px;
+		}
+
+		.cancel_button {
+			padding: 10px 14px;
+		}
+}

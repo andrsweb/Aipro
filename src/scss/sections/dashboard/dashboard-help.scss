@@ -1,0 +1,59 @@
+.dashboard-help {
+	background-color: #F6F6F6;
+	.header {
+		position: static;
+	}
+
+	.footer {
+		.container {
+			max-width: 1150px;
+		}
+
+		background-color: #F6F6F6;
+
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__link, &__support {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 24px;
+			line-height: 32px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+			text-transform: none;
+		}
+
+		&__support {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+
+	.wrapper {
+		margin-top: 0;
+	}
+
+	.dashboard__help {
+		.container {
+			max-width: 1150px;
+		}
+
+		h2 {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 36px;
+			line-height: 44px;
+			text-align: center;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+			margin-top: 30px;
+			margin-bottom: 64px;
+			text-align: left;
+		}
+	}
+}

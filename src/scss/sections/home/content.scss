@@ -1,0 +1,139 @@
+.content {
+	padding: 60px 0;
+	background-color: $white;
+
+	@media all and (min-width: $lg) {
+		padding: 120px 0;
+	}
+
+	h2 {
+		color: $blackened;
+		margin-bottom: 24px;
+	}
+
+	&__img_wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 40px;
+		position: static;
+
+		@media all and (min-width: $md) {
+			display: none;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+
+		&.scrolled {
+			padding-top: 352px;
+
+			.content__img_wrapper {
+				position: fixed;
+				top: 60px;
+				left: 0;
+			}
+		}
+	}
+
+	&__item {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&_inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@media all and (min-width: $lg) {
+				flex-direction: row;
+			}
+		}
+
+		&_texts {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+
+			@media all and (min-width: $lg) {
+				width: 41%;
+			}
+		}
+
+		&_img {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 40px;
+			width: 100%;
+
+			@media all and (min-width: $lg) {
+				justify-content: flex-start;
+				width: calc( 59% - 120px );
+				margin-right: 120px;
+			}
+
+			&.off {
+				display: none;
+
+				@media all and (min-width: $md) {
+					display: block;
+				}
+			}
+		}
+
+		&_num {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 36px;
+			line-height: 44px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+			margin-bottom: 5px;
+
+			@media all and (min-width: $lg) {
+				margin-bottom: 0;
+			}
+		}
+
+		&_title {
+			display: flex;
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 16px;
+			line-height: 24px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+			margin-bottom: 15px;
+
+			@media all and (min-width: $lg) {
+				margin-bottom: 24px;
+			}
+		}
+
+		&_text {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 24px;
+			line-height: 32px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+
+			span {
+				color: $accent1;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 36px;
+				line-height: 44px;
+			}
+		}
+	}
+}

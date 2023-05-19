@@ -4,6 +4,7 @@
 @import 'common/typography';
 @import 'common/grid';
 @import 'common/base';
+@import 'common/buttons';
 
 // Header styles.
 @import 'header/header';
@@ -13,3 +14,31 @@
 
 // Home page sections styles.
 @import 'sections/home/hero';
+@import 'sections/home/reasons';
+@import 'sections/home/content';
+@import 'sections/home/pricing';
+@import 'sections/home/experiment';
+@import 'sections/home/dropdowns';
+@import 'sections/home/strides';
+
+// Signin page sections styles.
+@import 'sections/signin/header';
+@import 'sections/signin/hero';
+@import 'sections/signin/footer';
+
+// Recovery page sections styles.
+@import 'sections/recovery/recovery';
+
+// Signup page sections styles.
+@import 'sections/signup/signup';
+
+// Password-sent page sections styles.
+@import 'sections/password-sent/password-sent';
+
+// Dashboard page sections styles.
+@import 'sections/dashboard/header';
+@import 'sections/dashboard/hero';
+@import 'sections/dashboard/dashbord-full';
+@import 'sections/dashboard/dashboard-settings';
+@import 'sections/dashboard/dashboard-help';
+@import 'sections/dashboard/popups';

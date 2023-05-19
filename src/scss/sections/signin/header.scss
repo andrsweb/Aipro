@@ -1,0 +1,35 @@
+.signin, .login, .recovery, .signup, .reset-password, .password-sent {
+	background-color: #F6F6F6;
+
+	.wrapper {
+		margin-top: 0;
+	}
+
+	.header-logo {
+		display: block;
+		margin: 0 auto;
+
+		@media all and (min-width: $md) {
+			margin: 0;
+		}
+	}
+
+	.header {
+		position: static;
+		padding: 25px 0;
+		background-color: #F6F6F6;
+
+		@media all and (min-width: $md) {
+			padding: 32px 0;
+		}
+
+		&-wrapper {
+			justify-content: flex-start;
+		}
+
+		.container {
+			max-width: 1156px;
+		}
+	}
+	
+}

@@ -18,10 +18,11 @@ body {
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: $accent2
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto
 }
@@ -32,13 +33,29 @@ ul {
 	list-style: none
 }
 
+button {
+	border: 0;
+	border-style: none;
+	background-color: transparent;
+}
+
+input {
+	border: 0;
+	border-style: none;
+}
+
 .wrapper {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
+	margin-top: 80px;
 	overflow: hidden;
+
+	@media all and (min-width: $lg) {
+		margin-top: 148px;
+	}
 
 	.footer {
 		margin-top: auto

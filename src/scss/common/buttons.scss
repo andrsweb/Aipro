@@ -1,0 +1,164 @@
+.button {
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 12px 16px;
+	text-align: center;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: $blackened;
+	border: 2px solid $blackened;
+	border-radius: $bord;
+	cursor: pointer;
+	transition: opacity ease $tr,
+		background-color ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
+
+	&.button_header {
+		display: none;
+
+		@media all and (min-width: $md) {
+			display: block;
+		}
+
+		&.header_mobile {
+			display: block;
+
+			@media all and (min-width: $md) {
+				display: none;
+			}
+		}
+	}
+
+	&.hero_button {
+		font-size: 16px;
+		color: $white;
+		background-color: $accent1;
+		border: none;
+		padding: 16px 32px;
+
+		&:hover {
+			opacity: 1;
+			background-color: #F47750;
+		}
+	}
+}
+
+.signin-button {
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 16px;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: $white;
+	background: $blackened;
+	border-radius: 40px;
+	padding: 13px 34px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: opacity ease $tr;
+
+	img {
+		margin-right: 8px;
+	}
+
+	&:hover {
+		opacity: $op;
+	}
+
+	&.delete_button {
+		background-color: #F02215;
+		color: $white;
+	}
+
+	&.submit_button {
+		background-color: $accent1;
+		text-align: center;
+		padding: 16px 35px;
+		font-size: 16px;
+	}
+
+	@media all and (min-width: $md) {
+		font-size: 16px;
+		padding: 12px 54px;
+	}
+}
+
+.burger-button {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	padding: 8.5px 3px;
+	position: relative;
+	z-index: 100;
+
+	&:hover span {
+		&::after {
+			transform: translateX( -5px );
+		}
+	}
+
+	& span {
+		position: absolute;
+		left: 0;
+		top: 7px;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: $black;
+		border-radius: 12px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 7px;
+			display: block;
+			width: 100%;
+			height: 2px;
+			border-radius: 12px;
+			background-color: $black;
+			transition: transform ease $tr;
+		}
+	}
+
+	@media all and (min-width: $md) {
+		display: none;
+	}
+
+	&.opened {
+		animation:  rot 0.7s 1 cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+		@keyframes rot {
+			0% {
+				transform: rotate( 0 );
+			}
+
+			100% {
+				transform: rotate( 360deg);
+			}
+		}
+		span {
+			transform: rotate( -45deg );
+			top: 10px;
+			background: $accent1;
+		}
+
+		span::after {
+			background: $accent1;
+			transform: rotate( 90deg );
+			top: 0;
+		}
+	}
+}

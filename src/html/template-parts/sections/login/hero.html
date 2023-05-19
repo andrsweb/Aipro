@@ -1,0 +1,32 @@
+<section class="signin__hero">
+	<div class="container">
+		<h1>
+			Login
+		</h1>
+		<form class="signin__hero_form">
+			<fieldset>
+				<label for="signin-email">
+					Email
+				</label>
+				<input class="signin__input" type="email" name="login-email" id="signin-email">
+				<label for="signin-password">
+					Password
+				</label>
+				<span class="input__wrapper">
+					<input class="signin__input last_input" type="password" name="login-password" id="signin-password">
+					@@include( '../signin/eye.html' )
+					@@include( '../signin/eye-closed.html' )
+				</span>
+				<a class="forgot__password" href="recovery.html">
+					Forgot password?
+				</a>
+				<button class="signin-button submit_button">
+					log in
+				</button>
+			</fieldset>
+			<p class="signin__hero_text">
+				Don’t have an account? <a class="signin__hero_link" href="signin.html">sign up</a>
+			</p>
+		</form>
+	</div>
+</section>
