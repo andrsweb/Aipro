@@ -18,3 +18,6 @@ import './content'
 
 //popups
 import './popups'
+
+//slides
+import './swiper'

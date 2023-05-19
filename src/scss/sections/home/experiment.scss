@@ -2,39 +2,6 @@
 	background-color: $blackened;
 	padding: 120px 0;
 
-	&__title {
-		font-family: $ff;
-		font-style: normal;
-		font-weight: $fw-bold;
-		font-size: 16px;
-		line-height: 24px;
-		font-feature-settings: 'pnum' on, 'lnum' on;
-		color: $white;
-		margin-bottom: 40px;
-	}
-
-	.desc__text {
-		font-family: $ff-title;
-		font-style: normal;
-		font-weight: $fw-regular;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: 0.01em;
-		font-feature-settings: 'pnum' on, 'lnum' on;
-		color: #C5CACF;
-
-		&::after {
-			content: url( '../img/experiment/ico.png' );
-			margin-top: 5px;
-			cursor: pointer;
-			transition: opacity ease $tr;
-		}
-
-		&:hover::after {
-			opacity: $op;
-		}
-	}
-
 	&__img {
 		margin-bottom: 16px;
 	}
@@ -42,6 +9,13 @@
 	&__items {
 		display: flex;
 		justify-content: space-between;
+
+		&.experiment__desktop {
+			display: none;
+			@media all and (min-width: $md) {
+				display: flex;
+			}
+		}
 	}
 
 	&__item {
@@ -85,7 +59,7 @@
 		}
 	}
 
-	.swiper-slide {
+	&__col {
 		display: flex;
 		flex-wrap: wrap;
 
@@ -101,6 +75,93 @@
 
 		&:last-child {
 			width: 23%;
+		}
+	}
+}
+
+.experiment__title {
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-bold;
+	font-size: 16px;
+	line-height: 24px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $white;
+	margin-bottom: 40px;
+}
+
+.desc__text {
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-regular;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.01em;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #C5CACF;
+
+	&::after {
+		content: url( '../img/experiment/ico.png' );
+		margin-top: 5px;
+		cursor: pointer;
+		transition: opacity ease $tr;
+	}
+
+	&:hover::after {
+		opacity: $op;
+	}
+}
+
+.experiment__items_mobile {
+	display: block;
+
+	.container {
+		padding: 0 0 0 20px;
+	}
+
+	@media all and (min-width: $md) {
+		display: none;
+	}
+
+	.experiment__img {
+		width: 160px;
+		height: 160px;
+
+		img {
+			object-fit: cover;
+		}
+	}
+}
+
+.experiment__texts {
+	margin-top: 90px;
+
+	.text__item_info {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 16px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $white;
+		margin-top: 16px;
+	}
+
+	.swiper-slide {
+		width: 280px;
+		height: 327px;
+		border: 2px solid #FFFFFF;
+		border-radius: 48px;
+		padding: 24px;
+
+		&.swiper-slide-active {
+			width: 280px;
+		}
+
+		@media all and (min-width: $md) {
+			width: 420px;
+			height: 344px;
+			padding: 32px;
 		}
 	}
 }
