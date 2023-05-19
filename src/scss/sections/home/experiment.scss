@@ -12,4 +12,95 @@
 		color: $white;
 		margin-bottom: 40px;
 	}
+
+	.desc__text {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.01em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #C5CACF;
+
+		&::after {
+			content: url( '../img/experiment/ico.png' );
+			margin-top: 5px;
+			cursor: pointer;
+			transition: opacity ease $tr;
+		}
+
+		&:hover::after {
+			opacity: $op;
+		}
+	}
+
+	&__img {
+		margin-bottom: 16px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		&.item_margin {
+			margin-right: 25px;
+		}
+
+		&.second_item {
+			width: 100%;
+			max-width: 192px;
+		}
+
+		&.last_item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			max-width: 192px;
+			margin-bottom: 90px;
+		}
+
+		&_wrapper {
+			display: flex;
+
+			&:last-child {
+				flex-direction: column;
+			}
+
+			&.first_wrapper {
+				margin-bottom: 112px;
+			}
+
+			&.second_wrapper {
+				width: 100%;
+				max-width: 409px;
+				flex-direction: row;
+			}
+
+			&.last_wrapper {
+				align-items: flex-end;
+			}
+		}
+	}
+
+	.swiper-slide {
+		display: flex;
+		flex-wrap: wrap;
+
+		&:first-child {
+			width: 40%;
+		}
+
+		&:nth-child(2) {
+			width: 34%;
+			align-items: flex-end;
+			padding-bottom: 40px;
+		}
+
+		&:last-child {
+			width: 23%;
+		}
+	}
 }
