@@ -9,93 +9,14 @@
 		<p class="experiment__title">
 			Write a description and get a unique picture
 		</p>
-		<div class="swiper">
-			<div class="swiper-wrapper">
-				<div class="experiment__items">
-					<div class="swiper-slide">
-						<div class="experiment__item_wrapper first_wrapper">
-							<div class="experiment__item item_margin">
-								<div class="experiment__img">
-									<img src="img/experiment/1.png" width="300" height="300" loading="lazy" alt="">
-								</div>
-								<div class="experiment__desc">
-									<div class="desc__text">
-										3d render of red fur monster on grey background
-									</div>
-								</div>
-							</div>
-							<div class="experiment__item second_item">
-								<div class="experiment__img">
-									<img src="img/experiment/2.png" width="192" height="192" loading="lazy" alt="">
-								</div>
-								<div class="experiment__desc">
-									<div class="desc__text">
-										3d render of red fur monster on grey background
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="experiment__item_wrapper second_wrapper">
-							<div class="experiment__item item_margin">
-								<div class="experiment__img">
-									<img src="img/experiment/4.png" width="192" height="192" loading="lazy" alt="">
-								</div>
-								<div class="experiment__desc">
-									<div class="desc__text">
-										3d render of red fur monster on grey background
-									</div>
-								</div>
-							</div>
-							<div class="experiment__item">
-								<div class="experiment__img">
-									<img src="img/experiment/5.png" width="192" height="192" loading="lazy" alt="">
-								</div>
-								<div class="experiment__desc">
-									<div class="desc__text">
-										3d render of red fur monster on grey background
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="experiment__item">
-							<div class="experiment__img">
-								<img src="img/experiment/6.png" width="407" height="398" loading="lazy" alt="">
-							</div>
-							<div class="experiment__desc">
-								<div class="desc__text">
-									3d render of red fur monster on grey background
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="experiment__item_wrapper last_wrapper">
-							<div class="experiment__item last_item">
-								<div class="experiment__img">
-									<img src="img/experiment/3.png" width="192" height="192" loading="lazy" alt="">
-								</div>
-								<div class="experiment__desc">
-									<div class="desc__text">
-										3d render of red fur monster on grey background
-									</div>
-								</div>
-							</div>
-							<div class="experiment__item">
-								<div class="experiment__img">
-									<img src="img/experiment/7.png" width="298" height="298" loading="lazy" alt="">
-								</div>
-								<div class="experiment__desc">
-									<div class="desc__text">
-										3d render of red fur monster on grey background
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
+		<div class="experiment_items">
+			@@include( './experiment-desktop.html' )
+			@@include( './experiment-mobile.html')
+		</div>
+		<div class="experiment__texts">
+			<h2>
+				Texts
+			</h2>
+		</div>
 </section>
