@@ -97,6 +97,7 @@
 	}
 
 	.fields__render {
+		width: 100%;
 		border-top: 2px solid $blackened;
 		padding-top: 8px;
 		margin-bottom: 16px;
@@ -119,10 +120,16 @@
 	}
 }
 
+.field.field_items {
+	height: 575px;
+}
+
 .field_items {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -4px;
+	overflow-y: auto;
+	height: 575px;
 }
 
 .field__item {
