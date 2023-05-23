@@ -18,6 +18,10 @@
 			max-width: 1230px;
 		}
 
+		&__hero {
+			height: 696px;
+		}
+
 		&__breadcrumbs {
 			margin-left: 22%;
 			margin-right: auto;
@@ -80,5 +84,11 @@
 
 	.order__button {
 		display: flex;
+	}
+
+	.order__wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 	}
 }
