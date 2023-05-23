@@ -1,0 +1,81 @@
+.aside {
+	width: 320px;
+	height: 100%;
+	padding: 0 40px;
+
+	fieldset {
+		display: flex;
+		flex-direction: column;
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__title {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 20px;
+		line-height: 28px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 16px;
+	}
+
+	input {
+		width: 100%;
+		max-width: 240px;
+		margin: 0;
+		margin-bottom: 14px;
+	}
+
+	.range__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.range__item {
+		display: flex;
+
+		input {
+			width: 100%;
+			max-width: 72px;
+			margin-bottom: 0;
+			margin-right: 16px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.range__input {
+			width: 100%;
+			max-width: 152px;
+		}
+	}
+	
+	.range__button_wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 48px;
+
+		.hero_button {
+			width: 100%;
+			max-width: 240px;
+		}
+	}
+
+	.tries {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 12px;
+		line-height: 16px;
+		text-align: center;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 8px;
+	}
+}
