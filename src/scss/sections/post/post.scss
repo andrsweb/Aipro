@@ -82,6 +82,10 @@
 		display: flex;
 	}
 
+	&__hero {
+		height: 696px;
+	}
+
 	.order__button {
 		display: flex;
 	}
@@ -90,6 +94,50 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+	}
+
+	.fields__render {
+		border-top: 2px solid $blackened;
+		padding-top: 8px;
+		margin-bottom: 16px;
+
+		&_text {
+			display: flex;
+			justify-content: space-between;
+			font-family: $ff-title;
+			font-style: normal;
+			font-weight: $fw-regular;
+			font-size: 14px;
+			line-height: 24px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+
+			span {
+				color: #707070;
+			}
+		}
+	}
+}
+
+.field_items {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -4px;
+}
+
+.field__item {
+	display: flex;
+	width: calc( 100% / 3 );
+	padding: 0 4px;
+	position: relative;
+	margin-bottom: 10px;
+
+	.field__checkbox {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
 	}
 }
 

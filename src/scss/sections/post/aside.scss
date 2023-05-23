@@ -27,6 +27,10 @@
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: $blackened;
 		margin-bottom: 16px;
+
+		&.post__title {
+			margin-bottom: 4px;
+		}
 	}
 
 	textarea {

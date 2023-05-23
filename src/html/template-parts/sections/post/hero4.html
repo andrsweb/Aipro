@@ -1,0 +1,75 @@
+<section class="post__hero">
+	<div class="container">
+		<div class="post__hero_wrapper">
+			@@include( './aside2.html' )
+			<div class="fields__wrapper">
+				<p class="aside__title post__title">
+					Generated Images
+				</p>
+				<p class="fields__subtitle">
+					Select all the images you want proceed with
+				</p>
+				<div class="fields__render">
+					<div class="fields__render_text">
+						3d render of red fur monster on wthe background
+						<span>
+							03/03/2023 12:37
+						</span>
+					</div>
+				</div>
+				<div class="field field_items">
+					@@loop( './item.html', [
+						{ 'src': 'img/experiment/2.png' },
+						{ 'src': 'img/experiment/4.png' },
+						{ 'src': 'img/experiment/5.png' },
+						{ 'src': 'img/experiment/6.png' },
+						{ 'src': 'img/experiment/1.png' },
+						{ 'src': 'img/experiment/7.png' },
+						{ 'src': 'img/experiment/2.png' },
+						{ 'src': 'img/experiment/1.png' },
+						{ 'src': 'img/experiment/7.png' }
+					] )
+				</div>
+			</div>
+			<div class="order">
+				<div class="order-wrapper">
+					<p class="order__title">
+						Order summary
+					</p>
+					<div class="order__inner">
+						<div class="order__text_wrapper">
+							<div class="order__text">
+								<span>x0</span> Text paragraphs
+							</div>
+							<span class="order__price">
+								$0.00
+							</span>
+						</div>
+						<div class="order__text_wrapper">
+							<div class="order__text">
+								<span>x0</span> Images
+							</div>
+							<span class="order__price">
+								$0.00
+							</span>
+						</div>
+						<div class="order__total_wrapper">
+							<div class="order__total">
+								Total
+							</div>
+							<div class="order__total_price">
+								$0.00
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order__button">
+					<button class="button button_header">
+						Checkout
+						<img src="img/post/arrow.svg" width="16" height="12" alt="">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
