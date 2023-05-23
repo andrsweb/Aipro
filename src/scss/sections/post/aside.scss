@@ -53,9 +53,13 @@
 		.range__input {
 			width: 100%;
 			max-width: 152px;
+			appearance: none;
+			outline: none;
+			overflow: hidden;
+			background-color: #f6f6f6;
 		}
 	}
-	
+
 	.range__button_wrapper {
 		display: flex;
 		flex-direction: column;
@@ -81,4 +85,4 @@
 	color: $blackened;
 	margin-bottom: 8px;
 	text-align: center;
-}	
+}
