@@ -23,11 +23,11 @@
 		display: none;
 
 		@media all and (min-width: $md) {
-			display: block;
+			display: flex;
 		}
 
 		&.header_mobile {
-			display: block;
+			display: flex;
 
 			@media all and (min-width: $md) {
 				display: none;

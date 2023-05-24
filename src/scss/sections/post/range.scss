@@ -1,94 +1,60 @@
-input[type=range] {
-	-webkit-appearance: none;
-	width: 100%;
-	background: transparent;
-}
-
-input[type=range]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-}
-
-input[type=range]:focus {
-	outline: none;
-}
-
-input[type=range]::-ms-track {
-	width: 100%;
+.rangeslider {
+	position: relative;
+	display: block;
 	cursor: pointer;
-	background: transparent;
-	border-color: transparent;
-	color: transparent;
+	height: 26px;
+	width: 152px;
 }
 
-input[type=range]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	border: 2px solid $accent1;
-	height: 16px;
+.rangeslider__fill,
+.rangeslider__fill__bg {
+	display: block;
+	position: absolute;
+	top: 50%;
+	height: 2px;
+	z-index: 2;
+	background: $accent1;
+	border-radius: 10px;
+	will-change: width;
+}
+
+.rangeslider__handle {
+	will-change: width, height, top;
 	width: 16px;
-	border-radius: 50%;
-	background: #f6f6f6;
-	cursor: pointer;
-	margin-top: -7px;
-}
-
-input[type=range]::-moz-range-thumb {
-	border: 2px solid $accent1;
-	height: 13px;
-	width: 13px;
-	border-radius: 50%;
-	background: #f6f6f6;
-	cursor: pointer;
-}
-
-input[type=range]::-ms-thumb {
 	height: 16px;
-	width: 16px;
-	border-radius: 3px;
-	background: $blackened;
+	position: absolute;
+	top: 50%;
+	background: #f6f6f6;
+	display: inline-block;
+	z-index: 3;
 	cursor: pointer;
+	border: solid 2px $accent1;
+	border-radius: 50%;
+	-webkit-transition: width 0.1s ease-in-out, height 0.1s ease-in-out, top 0.1s ease-in-out;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out, top 0.1s ease-in-out;
 }
 
-//track
-input[type=range]::-webkit-slider-runnable-track {
+.rangeslider__handle:active {
+	background: $accent1;
+}
+
+.rangeslider__fill__bg {
+	background: $blackened;
 	width: 100%;
-	height: 2px;
-	cursor: pointer;
-	background: $blackened;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-	background: $blackened;
+.rangeslider--disabled {
+	opacity: 0.4;
 }
 
-input[type=range]::-moz-range-track {
-	width: 100%;
-	height: 2px;
-	cursor: pointer;
-	background: $blackened;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
 }
 
-input[type=range]::-ms-track {
-	width: 100%;
-	height: 2px;
-	cursor: pointer;
-	background: transparent;
-	border-color: transparent;
-	border-width: 16px 0;
-	color: transparent;
-}
-
-input[type=range]::-ms-fill-lower {
-	background: $blackened;
-}
-
-input[type=range]:focus::-ms-fill-lower {
-	background: $blackened;
-}
-
-input[type=range]::-ms-fill-upper {
-	background: $blackened;
-}
-
-input[type=range]:focus::-ms-fill-upper {
-	background: $blackened;
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+	appearance: none;
+	-moz-appearance: textfield;
 }

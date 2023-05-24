@@ -21,3 +21,4 @@ import './popups'
 
 //slides
 import './swiper'
+import './range-slider'
