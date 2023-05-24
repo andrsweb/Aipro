@@ -30,9 +30,10 @@
 				display: flex;
 			}
 
-			li {
+			.tab__button {
 				position: relative;
 				margin-right: 24px;
+				cursor: pointer;
 
 				&:last-child {
 					margin-right: 0;
@@ -54,14 +55,13 @@
 					transition: border-color ease $tr;
 				}
 
-				&:hover {
-					a {
-						color: $accent1;
-					}
+				&.active {
+					color: $accent1;
 
 					&::after {
 						border-color: $accent1;
 					}
+					
 				}
 			}
 
@@ -169,5 +169,27 @@
 .post.loading {
 	.field {
 		border: 0;
+	}
+}
+
+.tab__content {
+	display: none;
+	opacity: 0;
+
+	&.active {
+		display: block;
+		animation: open 1s ease forwards;
+
+		@keyframes open {
+			0% {
+				display: block;
+				opacity: 0;
+			}
+
+			100% {
+				display: block;
+				opacity: 1;
+			}
+		}
 	}
 }

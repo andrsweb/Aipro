@@ -5,8 +5,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const changeTab = () => {
-	const tabsHeaders	= document.querySelectorAll( '.price-tab-header' ),
-		tabsContents	= document.querySelectorAll( '.price-content' )
+	const tabsHeaders	= document.querySelectorAll( '.tab__button' ),
+		tabsContents	= document.querySelectorAll( '.tab__content' )
 
 	if( ! tabsHeaders.length || ! tabsContents.length ) return
 
@@ -19,7 +19,7 @@ const changeTab = () => {
 			tabs.forEach( tabsItem => tabsItem.classList.remove( 'active' ) )
 			tab.classList.add( 'active' )
 			tabsContents.forEach( content => content.classList.remove( 'active' ) )
-			document.querySelector( `.price-content[data-id="${ id }"]` ).classList.add( 'active' )
+			document.querySelector( `.tab__content[data-id="${ id }"]` ).classList.add( 'active' )
 		} )
 	} )
 }
