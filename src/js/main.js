@@ -25,3 +25,9 @@ import './range-slider'
 
 //tabs
 import './tabs'
+
+//for post
+import './forImages'
+
+//aside
+import './aside'

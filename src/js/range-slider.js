@@ -11,6 +11,8 @@ const inputValue = () => {
 	const rangeInput = document.querySelector( '.range-slider' )
 	const input      = document.querySelector( '.input' )
 
+	if( ! rangeInput && ! input ) return
+
 	rangeInput.addEventListener('input', (e) => { input.value = e.target.value });
 	input.addEventListener('input', (e) => { rangeInput.value = e.target.value });
 }

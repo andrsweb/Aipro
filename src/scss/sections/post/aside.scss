@@ -1,8 +1,112 @@
 .aside {
-	width: 320px;
-	height: 696px;
-	padding: 0 40px;
-	margin-right: 42px;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	display: none;
+	justify-content: flex-end;
+	background: rgba(34, 34, 34, 0.6);
+	backdrop-filter: blur(4px);
+
+	@media all and (min-width: $lg) {
+		position: static;
+		z-index: 0;
+		display: flex;
+		width: auto;
+		height: 696px;
+		margin-right: 42px;
+	}
+
+	&.images_aside {
+		flex-direction: column;
+		align-items: flex-end;
+
+		.range__button_wrapper {
+			position: static;
+			left: 0;
+			transform: translateX(0);
+		}
+	}
+
+	&.showed {
+		animation: show $tr ease forwards;
+		display: flex;
+
+		@keyframes show {
+			0% {
+				display: flex;
+				transform: translateX( -200% );
+			}
+
+			100% {
+				display: flex;
+				transform: translateX( 0 );
+			}
+		}
+	}
+
+	&__wrapper {
+		width: 288px;
+		height: 100%;
+		padding: 24px;
+		background-color: #f6f6f6;
+
+		@media all and (min-width: $lg) {
+			width: 200px;
+			padding: 0 10px;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 320px;
+			padding: 0 40px;
+		}
+	
+	}
+
+	&__close {
+		width: 18px;
+		height: 18px;
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			span:before, span::after {
+				background-color: $accent1;
+			}
+		}
+
+		span::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $blackened;
+			transform: rotate( -45deg);
+			transition: background-color ease $tr;
+		}
+
+		span::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $blackened;
+			transform: rotate(45deg);
+			transition: background-color ease $tr;
+		}
+
+		@media all and (min-width: $lg) {
+			display: none;
+		}
+	}
 
 	form {
 		height: 100%;
@@ -15,10 +119,38 @@
 		border: 0;
 		padding: 0;
 		margin: 0;
-		padding-bottom: 40px;
+
+		@media all and (min-width: $xl) {
+			padding-bottom: 40px;
+		}
+	}
+
+	.fieldset-wrapper {
+		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: #F04A15 #C5CACF;
+		height: 460px;
+		padding-right: 20px;
+		&::-webkit-scrollbar {
+			width: 2px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: #C5CACF;
+			margin-left: 20px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color:  #F04A15;
+			border-radius: 20px;
+			border: 4px solid  #F04A15;
+		}
 	}
 
 	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		font-family: $ff;
 		font-style: normal;
 		font-weight: $fw-bold;
@@ -76,6 +208,10 @@
 	}
 
 	.range__button_wrapper {
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

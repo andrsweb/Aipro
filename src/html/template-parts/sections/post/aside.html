@@ -1,46 +1,53 @@
 <aside class="aside">
-	<form class="aside__form">
-		<p class="aside__title">
-			Text Setup
-		</p>
-		<fieldset>
-			<label for="">
-				Project name
-			</label>
-			<textarea class="signin__input" type="text" placeholder="Project name"></textarea>
-			<label for="">
-				Business Description
-			</label>
-			<textarea class="signin__input" type="text" placeholder="Short description text"></textarea>
-			<label for="">
-				Text style
-			</label>
-			<textarea class="signin__input" type="text" placeholder="Select style"></textarea>
-			<label for="">
-				Content type
-			</label>
-			<textarea class="signin__input" type="text" placeholder="Select type"></textarea>
-			<label for="">
-				Keywords
-			</label>
-			<textarea class="signin__input" type="text" placeholder="cars, parts, hood, wheel, rims"></textarea>
-			<div class="range__wrapper">
-				<label for="">
-					Number of paragraphs
-				</label>
-				<div class="range__item">
-					<input value="0" class="signin__input input" type="number">
-					<input class="range__input range-slider" type="range" min="0" max="20" value="1" step="1" name="range">
+	<div class="aside__wrapper">
+		<form class="aside__form">
+			<div class="aside__title">
+				Text Setup
+				<div class="aside__close">
+					<span></span>
 				</div>
 			</div>
-			<div class="range__button_wrapper">
-				<div class="tries">
-					Tries <span>0</span>/3 left
+			<fieldset>
+				<div class="fieldset-wrapper">
+					<label for="">
+						Project name
+					</label>
+					<textarea class="signin__input" type="text" placeholder="Project name"></textarea>
+					<label for="">
+						Business Description
+					</label>
+					<textarea class="signin__input" type="text" placeholder="Short description text"></textarea>
+					<label for="">
+						Text style
+					</label>
+					<textarea class="signin__input" type="text" placeholder="Select style"></textarea>
+					<label for="">
+						Content type
+					</label>
+					<textarea class="signin__input" type="text" placeholder="Select type"></textarea>
+					<label for="">
+						Keywords
+					</label>
+					<textarea class="signin__input" type="text" placeholder="cars, parts, hood, wheel, rims"></textarea>
+					<div class="range__wrapper">
+						<label for="">
+							Number of paragraphs
+						</label>
+						<div class="range__item">
+							<input value="0" class="signin__input input" type="number">
+							<input class="range__input range-slider" type="range" min="0" max="20" value="1" step="1" name="range">
+						</div>
+					</div>
 				</div>
-				<button class="button hero_button">
-					Generate Text
-				</button>
-			</div>
-		</fieldset>
-	</form>
+				<div class="range__button_wrapper">
+					<div class="tries">
+						Tries <span>0</span>/3 left
+					</div>
+					<button class="button hero_button generate__text" type="button">
+						Generate Text
+					</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
 </aside>

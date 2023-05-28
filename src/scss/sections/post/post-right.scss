@@ -24,7 +24,11 @@
 		letter-spacing: 0.01em;
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: #707070;
-		margin-bottom: 24px;
+		margin-bottom: 15px;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 24px;
+		}
 	}
 }
 
@@ -32,8 +36,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 573px;
-	height: 244px;
 	border: 1px dashed #707070;
 	border-radius: 24px;
 	font-family: $ff-title;
@@ -44,10 +46,40 @@
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: #707070;
 	margin-bottom: 8px;
+	width: 320px;
+	height: 250px;
+
+	@media all and (min-width: $sm) {
+		width: 400px;
+	}
+
+	@media all and (min-width: $lg) {
+		width: 390px;
+	}
+
+	@media all and (min-width: $xxl) {
+		width: 573px;
+		height: 244px;
+	}
+	&__item {
+		cursor: pointer;
+
+		&.selected {
+			.field__checkbox {
+				background-color: $accent1;
+				border-color: $accent1;
+			}
+		}
+	}
 
 	&.field_items {
 		border: 0;
 		border-radius: 0;
+		padding-bottom: 220px;
+
+		@media all and (min-width: $lg) {
+			padding-bottom: 0;
+		}
 	}
 
 	&:last-child {
@@ -61,6 +93,35 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		border: 1px solid #707070;
+		cursor: pointer;
+
+		&.selected {
+			.radio {
+				border-color: $accent1;
+
+				& span {
+					position: absolute;
+					top: 50%;
+					left: -35%;
+					transform: translateY(-50%);
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					background-color: $accent1;
+					animation: scale 0.3s ease forwards;
+		
+					@keyframes scale {
+						0% {
+							scale: 0;
+						}
+		
+						100% {
+							scale: 1;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&__option {
@@ -105,11 +166,15 @@
 }
 
 .order {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	margin-left: 40px;
 	width: 267px;
 	height: 696px;
+
+	@media all and (min-width: $lg) {
+		display: flex;
+	}
 
 	&__title {
 		font-family: $ff;
@@ -148,7 +213,10 @@
 		white-space: nowrap;
 		padding: 15px 66px;
 		font-size: 16px;
-		margin-bottom: 40px;
+
+		@media all and (min-width: $xl) {
+			margin-bottom: 36px;
+		}
 
 		img {
 			margin-left: 12px;
@@ -186,4 +254,45 @@
 			color: #B96F00;
 		}
 	}
+}
+
+.fields__wrapper {
+	&.begin {
+		display: none;
+		opacity: 0;
+	}
+	
+	&.first_wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		@media all and (min-width: $lg) {
+			width: auto;
+			justify-content: flex-start;
+		}
+
+		&.begin {
+			display: none;
+		}
+	}
+}
+
+.radio {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border: 2px solid $blackened;
+	border-radius: 50%;
+	background-color: $white;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: border-color ease $tr;
+}
+
+.field__full_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 250px;
 }
