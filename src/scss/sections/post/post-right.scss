@@ -44,7 +44,7 @@
 	font-size: 14px;
 	line-height: 24px;
 	font-feature-settings: 'pnum' on, 'lnum' on;
-	color: #707070;
+	color: #c5cacf;
 	margin-bottom: 8px;
 	width: 320px;
 	height: 250px;
@@ -213,10 +213,6 @@
 		white-space: nowrap;
 		padding: 15px 66px;
 		font-size: 16px;
-
-		@media all and (min-width: $xl) {
-			margin-bottom: 36px;
-		}
 
 		img {
 			margin-left: 12px;

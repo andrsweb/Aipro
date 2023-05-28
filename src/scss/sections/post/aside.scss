@@ -16,7 +16,7 @@
 		display: flex;
 		width: auto;
 		height: 696px;
-		margin-right: 42px;
+		margin-right: 20px;
 	}
 
 	&.images_aside {
@@ -59,7 +59,7 @@
 		}
 
 		@media all and (min-width: $xl) {
-			width: 320px;
+			width: 348px;
 			padding: 0 40px;
 		}
 	
@@ -119,18 +119,15 @@
 		border: 0;
 		padding: 0;
 		margin: 0;
-
-		@media all and (min-width: $xl) {
-			padding-bottom: 40px;
-		}
 	}
 
 	.fieldset-wrapper {
 		overflow-y: auto;
 		scrollbar-width: thin;
 		scrollbar-color: #F04A15 #C5CACF;
-		height: 460px;
+		height: 492px;
 		padding-right: 20px;
+
 		&::-webkit-scrollbar {
 			width: 2px;
 		}
@@ -171,7 +168,7 @@
 		width: 100%;
 		max-width: 240px;
 		margin: 0;
-		margin-bottom: 16px;
+		margin-bottom: 10px;
 		overflow: hidden;
 		resize: none;
 	}
@@ -211,7 +208,7 @@
 		position: fixed;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 0;
+		bottom: 40px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -220,9 +217,12 @@
 
 	.hero_button {
 		white-space: nowrap;
-		margin-bottom: 40px;
 		max-width: 240px;
 		padding: 16px 26px;
+
+		@media all and (min-width: $xl) {
+			padding: 16px 42px;
+		}
 	}
 
 	&__item {

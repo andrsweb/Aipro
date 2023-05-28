@@ -156,12 +156,15 @@
 
 	.order__button {
 		display: flex;
+		position: absolute;
+		bottom: 40px;
 	}
 
 	.order__wrapper {
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+		position: relative;
 	}
 
 	.fields__render {
