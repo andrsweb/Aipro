@@ -9,7 +9,7 @@ const showAndCloseAside = () => {
 	const aside        = document.querySelector( '.aside' )
 	const asideClose   = document.querySelector( '.aside__close' )
 
-	if( ! configButton && ! aside ) return
+	if( ! configButton || ! aside || ! asideClose ) return
 
 	configButton.forEach( button => {
 		button.addEventListener( 'click', () => {

@@ -34,3 +34,6 @@ import './aside'
 
 //for textarea
 import './forTextArea'
+
+//google
+import './googleSignin'

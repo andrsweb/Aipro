@@ -1,7 +1,7 @@
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
-	autoGrow( 'textarea')
+	// autoGrow( 'textarea')
 } )
 
 const autoGrow = (element) => {

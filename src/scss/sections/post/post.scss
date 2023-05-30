@@ -5,6 +5,14 @@
 		max-width: 1310px;
 	}
 
+	&__hero {
+		padding-bottom: 220px;
+
+		@media all and (min-width: $lg) {
+			padding-bottom: 0;
+		}
+	}
+
 	.wrapper {
 		margin-top: 0;
 
@@ -153,12 +161,6 @@
 
 		@media all and (min-width: $xxl) {
 			justify-content: flex-start;
-		}
-	}
-
-	&__hero {
-		@media all and (min-width: $lg) {
-			height: 696px;
 		}
 	}
 
