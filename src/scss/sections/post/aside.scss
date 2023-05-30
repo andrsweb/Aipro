@@ -14,6 +14,7 @@
 		position: static;
 		z-index: 0;
 		display: flex;
+		justify-content: flex-start;
 		width: auto;
 		height: 696px;
 		margin-right: 20px;
@@ -48,24 +49,12 @@
 	}
 
 	&__wrapper {
-		width: 288px;
-		height: 100%;
+		background-color: #F6F6F6;
 		padding: 24px;
-		background-color: #f6f6f6;
-		overflow-y: auto;
-		margin: auto 0;
 
 		@media all and (min-width: $lg) {
-			width: 240px;
-			padding: 0 10px;
-			overflow-y: hidden;
-		}
-
-		@media all and (min-width: $xl) {
-			width: 348px;
 			padding: 0 40px;
 		}
-	
 	}
 
 	&__close {
@@ -125,10 +114,11 @@
 	}
 
 	.fieldset-wrapper {
+		display: flex;
+		flex-direction: column;
 		overflow-y: auto;
 		scrollbar-width: thin;
 		scrollbar-color: #F04A15 #C5CACF;
-		height: 492px;
 		padding-right: 20px;
 
 		&::-webkit-scrollbar {
@@ -171,7 +161,7 @@
 		width: 100%;
 		max-width: 240px;
 		margin: 0;
-		margin-bottom: 10px;
+		margin-bottom: 17px;
 		overflow: hidden;
 		resize: none;
 	}

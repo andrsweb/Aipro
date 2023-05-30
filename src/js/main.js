@@ -31,3 +31,6 @@ import './forImages'
 
 //aside
 import './aside'
+
+//for textarea
+import './forTextArea'
