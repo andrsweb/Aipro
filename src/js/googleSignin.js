@@ -9,7 +9,7 @@ const signinGoogle = () => {
 	const startApp = () => {
 		gapi.load('auth2', function () {
 			auth2 = gapi.auth2.init({
-				client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+				client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com', // need set ID
 				cookiepolicy: 'single_host_origin',
 			});
 			attachSignin(document.getElementById('google_button'))
