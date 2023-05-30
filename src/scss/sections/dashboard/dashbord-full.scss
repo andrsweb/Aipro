@@ -66,10 +66,16 @@
 		}
 	}
 
-	.header-button {
+	.dashboard_download {
 		display: none;
 		align-items: center;
 		padding: 8px 16px;
+
+		&:hover {
+			background-color: $blackened;
+			color: $accent1;
+			opacity: 1;
+		}
 
 		img {
 			margin-right: 10px;
