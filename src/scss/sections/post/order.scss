@@ -55,6 +55,27 @@
 
 	.card__input {
 		margin-right: 16px;
+		position: relative;
+
+		.visa-small {
+			position: absolute;
+			right: 20px;
+			top: 60%;
+		}
+
+		.info__wrapper {
+			position: absolute;
+			right: 14px;
+			top: 54%;
+			cursor: pointer;
+
+			&:hover {
+				.info__prompt {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
 
 		&:first-child {
 			width: 100%;
@@ -98,5 +119,44 @@
 				margin-right: 0;
 			}
 		}
+	}
+}
+
+.info__prompt {
+	position: absolute;
+	right: -15px;
+	bottom: -75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 16px;
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-regular;
+	font-size: 12px;
+	line-height: 16px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $blackened;
+	width: 180px;
+	height: 48px;
+	border-radius: 16px;
+	background-color: #C5CACF;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity ease $tr,
+			visibility ease $tr;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 14px;
+		height: 14px;
+		background-color: inherit;
+		position: absolute;
+		right: 18px;
+		top: -6px;
+		transform: rotate( 45deg);
 	}
 }
