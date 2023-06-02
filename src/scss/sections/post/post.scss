@@ -217,11 +217,16 @@
 		justify-content: center;
 
 		@media all and (min-width: $lg) {
-			width: 50%;
+			width: 70%;
 		}
 
 		@media all and (min-width: $xxl) {
 			width: 63%;
+		}
+
+		&.second_wrapper {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 
