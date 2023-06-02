@@ -37,3 +37,6 @@ import './forTextArea'
 
 //google
 import './googleSignin'
+
+//mask
+import './mask'
