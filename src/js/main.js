@@ -31,7 +31,6 @@ import './forImages'
 
 //aside
 import './aside'
-import './disabledRadio'
 
 //for textarea
 import './forTextArea'
