@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
 		contentTop = content.getBoundingClientRect().top,
 		contentBot = content.getBoundingClientRect().bottom
 
-	if ( ! content || !document.body.classList.contains('mobile') ) return
+	if ( ! content || !document.body.classList.contains('mobile') && ! contentTop && ! contentBot ) return
 
 	if (contentTop <= document.querySelector( '.header').offsetHeight) {
 		content.classList.add('scrolled')

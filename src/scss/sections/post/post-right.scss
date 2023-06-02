@@ -54,20 +54,75 @@
 	}
 
 	@media all and (min-width: $lg) {
-		width: 390px;
+		width: 340px;
 	}
 
 	@media all and (min-width: $xxl) {
 		width: 573px;
 		height: 244px;
 	}
+
 	&__item {
 		cursor: pointer;
+		position: relative;
 
 		&.selected {
 			.field__checkbox {
 				background-color: $accent1;
 				border-color: $accent1;
+			}
+
+			.field__item_tries {
+				display: flex;
+				animation: opacity $tr forwards linear;
+
+				@keyframes opacity {
+					0% {
+						display: flex;
+						opacity: 0;
+					}
+	
+					100% {
+						display: flex;
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&_tries {
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			padding: 10px 42px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: rgba(255, 255, 255, 0.8);
+			backdrop-filter: blur(4px);
+
+			.field__item_left {
+				font-family: $ff-title;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 16px;
+				text-align: center;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: $blackened;
+			}
+
+			.field__item_regenerate {
+				font-family: $ff;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 16px;
+				text-align: center;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+				color: $blackened;
 			}
 		}
 	}
@@ -174,6 +229,12 @@
 
 	@media all and (min-width: $lg) {
 		display: flex;
+		width: 50%;
+	}
+
+	@media all and (min-width: $xxl) {
+		display: flex;
+		width: calc( 37% - 40px );
 	}
 
 	&__title {

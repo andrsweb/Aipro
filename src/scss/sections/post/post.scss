@@ -5,6 +5,32 @@
 		max-width: 1310px;
 	}
 
+	&__zone {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		@media all and (min-width: $lg) {
+			width: calc( 100% - 320px );
+		}
+
+		@media all and (min-width: $xl) {
+			padding-left: 40px;
+		}
+
+		.dropdown__title {
+			padding-right: 7px;
+			margin-bottom: 0;
+			transition: margin ease $tr;
+		}
+
+		.post__dropdown.opened {
+			.dropdown__title {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
 	&__hero {
 		padding-bottom: 220px;
 
@@ -157,6 +183,7 @@
 
 		@media all and (min-width: $lg) {
 			justify-content: space-between;
+			padding-top: 5px;
 		}
 
 		@media all and (min-width: $xxl) {
@@ -178,6 +205,24 @@
 		flex-direction: column;
 		height: 100%;
 		position: relative;
+
+		@media all and (min-width: $lg) {
+			padding-right: 30px;
+		}
+	}
+
+	.fields__wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		@media all and (min-width: $lg) {
+			width: 50%;
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 63%;
+		}
 	}
 
 	.fields__render {
