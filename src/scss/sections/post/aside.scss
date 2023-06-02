@@ -28,6 +28,22 @@
 			left: 0;
 			transform: translateX(0);
 		}
+
+		.aside__item {
+			margin-bottom: 15px;
+		}
+
+		.aside__inner {
+			margin-bottom: 8px;
+		}
+
+		.range__button_wrapper {
+			margin-top: 108px;
+		}
+
+		.button .button_header {
+			max-width: 267px;
+		}
 	}
 
 	&.showed {
