@@ -126,7 +126,12 @@
 				text-align: center;
 				letter-spacing: 0.5px;
 				text-transform: uppercase;
-				color: $blackened;
+				color: #707070;
+				transition: color ease $tr;
+			
+				&:hover {
+					color: $blackened;
+				}
 			}
 		}
 	}
@@ -134,11 +139,6 @@
 	&.field_items {
 		border: 0;
 		border-radius: 0;
-		padding-bottom: 220px;
-
-		@media all and (min-width: $lg) {
-			padding-bottom: 0;
-		}
 	}
 
 	&:last-child {
