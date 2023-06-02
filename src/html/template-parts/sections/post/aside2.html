@@ -8,16 +8,17 @@
 		</div>
 		<form class="aside__form">
 			<fieldset>
-				<label for="">
+				<div class="radio__title">
 					Keywords
-				</label>
+				</div>
 				<textarea class="signin__input" type="text"></textarea>
 				<div class="aside__item">
-					<label>
+					<div class="radio__title">
 						Size
-					</label>
+					</div>
 					<div class="aside__inner signin__input">
-						<input type="radio">
+						<input class="radio__button" id="radio1" type="radio">
+						<label for="radio1"></label>
 						<p class="aside__inner_text">
 							Square
 						</p>
@@ -26,12 +27,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="aside__item">
-					<label>
+				<div class="aside__item comming_soon">
+					<div class="radio__title">
 						Coming soon
-					</label>
+					</div>
 					<div class="aside__inner signin__input">
-						<input type="radio" name="soon">
+						<input id="radio2" class="radio__button" type="radio" name="soon">
+						<label for="radio2"></label>
 						<p class="aside__inner_text">
 							Story
 						</p>
@@ -40,7 +42,8 @@
 						</div>
 					</div>
 					<div class="aside__inner signin__input">
-						<input type="radio" name="soon">
+						<input class="radio__button" id="radio3" type="radio" name="soon">
+						<label class="label" for="radio3"></label>
 						<p class="aside__inner_text">
 							Landscape
 						</p>
@@ -49,7 +52,8 @@
 						</div>
 					</div>
 					<div class="aside__inner signin__input">
-						<input type="radio" name="soon">
+						<input class="radio__button" id="radio4" type="radio" name="soon">
+						<label class="label" for="radio4"></label>
 						<p class="aside__inner_text">
 							Vertical
 						</p>
