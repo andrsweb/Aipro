@@ -16,15 +16,18 @@ window.addEventListener('resize', () => {
 
 // Scroll
 window.addEventListener('scroll', () => {
+	const content = document.querySelector('.content__items')
+
+	if( ! content ) return
+
 	const
 		steps = document.querySelectorAll('.content__item'),
 		imgFixed = document.querySelector('.img__fixed_mobile'),
 		source = document.querySelector('.content__img_wrapper picture source'),
-		content = document.querySelector('.content__items'),
 		contentTop = content.getBoundingClientRect().top,
 		contentBot = content.getBoundingClientRect().bottom
-
-	if ( ! content || !document.body.classList.contains('mobile') && ! contentTop && ! contentBot ) return
+		
+	if ( !document.body.classList.contains('mobile') && ! contentTop && ! contentBot ) return
 
 	if (contentTop <= document.querySelector( '.header').offsetHeight) {
 		content.classList.add('scrolled')
