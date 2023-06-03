@@ -128,7 +128,7 @@
 
 	form {
 		height: 100%;
-		width: 240px;
+		width: 260px;
 	}
 
 	fieldset {
@@ -146,9 +146,10 @@
 		overflow-y: auto;
 		scrollbar-width: thin;
 		scrollbar-color: #F04A15 #C5CACF;
+		scroll-behavior: smooth;
 
 		&::-webkit-scrollbar {
-			width: 2px;
+			width: 1px;
 		}
 
 		&::-webkit-scrollbar-track {
@@ -300,6 +301,11 @@
 	.dropdown {
 		margin-bottom: 16px;
 		cursor: pointer;
+		max-width: 240px;
+
+		&_area {
+			height: 48px;
+		}
 
 		&__inner {
 			width: 100%;
@@ -336,7 +342,7 @@
 			}
 			
 			span {
-				top: 29.5%;
+				top: 40%;
 				transform: rotate( -45deg );
 			}
 		}
