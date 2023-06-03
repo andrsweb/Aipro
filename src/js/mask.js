@@ -11,5 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const maskForInput = (mask, id) => {
 	const selector = document.getElementById(id)
 
+	if( ! selector ) return
+
 	Inputmask({ 'mask': mask, 'placeholder': '*', }).mask(selector)
 }

@@ -182,14 +182,21 @@
 	}
 
 	textarea {
-		height: 48px;
-		max-height: 72px;
+		min-height: 48px;
 		width: 100%;
 		max-width: 240px;
 		margin: 0;
 		margin-bottom: 16px;
-		overflow: hidden;
 		resize: none;
+		overflow: hidden;
+
+		@media all and (min-width: $lg) {
+			height: 48px;
+		}
+
+		&::-webkit-scrollbar {
+			width: 0px;
+		}
 	}
 
 	.range__wrapper {

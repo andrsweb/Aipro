@@ -1,10 +1,18 @@
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
-	// autoGrow( 'textarea')
+	autoGrow( '.resize_textarea' )
 } )
 
 const autoGrow = (element) => {
-	element.style.height = "48px";
-	element.style.height = (element.scrollHeight)+"px";
+	const textarea = document.querySelectorAll( element )
+
+	textarea.forEach( area => {
+		area.addEventListener( 'keyup', e => {
+			area.style.height = 'auto'
+			let scrollHeight = e.target.scrollHeight
+			area.style.height = `${scrollHeight}px`
+		} )
+	} )
+	
 }

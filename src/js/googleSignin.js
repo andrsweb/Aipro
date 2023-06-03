@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	signinGoogle()
+	// signinGoogle()
 })
 
 const signinGoogle = () => {
