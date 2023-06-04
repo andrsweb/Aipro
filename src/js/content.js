@@ -19,23 +19,22 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', () => {
 	const content = document.querySelector('.content__items')
 
-	if( ! content ) return
+	if (!content) return
 
 	const
 		steps = document.querySelectorAll('.content__item'),
-		imgFixed = document.querySelector('.img__fixed_mobile'),
-		source = document.querySelector('.content__img_wrapper picture source'),
+		images = document.querySelectorAll('.img__fixed_mobile'),
 		contentTop = content.getBoundingClientRect().top,
 		contentBot = content.getBoundingClientRect().bottom
-		
-	if ( !document.body.classList.contains('mobile') ) return
 
-	if (contentTop <= document.querySelector( '.header').offsetHeight) {
+	// if ( !document.body.classList.contains('mobile') ) return
+
+	if (contentTop <= document.querySelector('.header').offsetHeight) {
 		content.classList.add('scrolled')
-	
-		if (contentBot <= 360) {
+
+		if (contentBot <= 500) {
 			content.classList.remove('scrolled')
-		} 
+		}
 
 	} else {
 		content.classList.remove('scrolled')
@@ -45,8 +44,13 @@ window.addEventListener('scroll', () => {
 		const viewportOffsetY = step.getBoundingClientRect().top
 
 		if (viewportOffsetY <= 380) {
-			imgFixed.src = step.querySelector('img').src
-			source.srcset = step.querySelector('img').src
+			images.forEach(img => {
+				if (img.dataset.id == step.dataset.id) {
+					img.classList.remove('hidden')
+				} else {
+					img.classList.add('hidden')
+				}
+			})
 		}
 	})
 })
