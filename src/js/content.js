@@ -2,17 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	checkWindowSize()
-})
-
-// resize func
-const checkWindowSize = () => {
-	if (window.innerWidth <= 767) document.body.classList.add('mobile')
-	else document.body.classList.remove('mobile')
-}
-
-window.addEventListener('resize', () => {
-	checkWindowSize()
 })
 
 // Scroll
@@ -26,8 +15,6 @@ window.addEventListener('scroll', () => {
 		images = document.querySelectorAll('.img__fixed_mobile'),
 		contentTop = content.getBoundingClientRect().top,
 		contentBot = content.getBoundingClientRect().bottom
-
-	// if ( !document.body.classList.contains('mobile') ) return
 
 	if (contentTop <= document.querySelector('.header').offsetHeight) {
 		content.classList.add('scrolled')
@@ -44,11 +31,17 @@ window.addEventListener('scroll', () => {
 		const viewportOffsetY = step.getBoundingClientRect().top
 
 		if (viewportOffsetY <= 380) {
-			images.forEach(img => {
+			images.forEach( (img, i, arr ) => {
 				if (img.dataset.id == step.dataset.id) {
-					img.classList.remove('hidden')
-				} else {
-					img.classList.add('hidden')
+					if( img.classList.contains( 'hidden' ) ) {
+						arr.forEach( image => {
+							image.classList.add( 'hidden')
+						} )
+						if( img.classList.contains( 'hidden')) {
+							img.classList.remove( 'hidden' )
+						}
+					
+					}
 				}
 			})
 		}
