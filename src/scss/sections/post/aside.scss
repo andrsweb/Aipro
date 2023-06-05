@@ -4,7 +4,7 @@
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 100;
+	z-index: 1;
 	display: none;
 	justify-content: flex-end;
 	background: rgba(34, 34, 34, 0.6);
@@ -15,7 +15,7 @@
 		z-index: 0;
 		display: flex;
 		justify-content: flex-start;
-		width: 320px;
+		width: 340px;
 		height: 696px;
 	}
 
@@ -57,6 +57,7 @@
 	&.showed {
 		animation: show $tr ease forwards;
 		display: flex;
+		z-index: 100;
 
 		@keyframes show {
 			0% {
@@ -88,7 +89,6 @@
 		cursor: pointer;
 
 		&:hover {
-
 			span:before,
 			span::after {
 				background-color: $accent1;
