@@ -29,6 +29,11 @@
 		@media all and (min-width: $md) {
 			max-width: 412px;
 		}
+
+		.signin-button {
+			img {
+			}
+		}
 	}
 
 	h1 {
@@ -101,7 +106,7 @@
 
 				.input-img {
 					position: absolute;
-					right: 10px;
+					right: 18px;
 					top: 50%;
 					transform: translateY( -50% );
 					cursor: pointer;

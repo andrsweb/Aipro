@@ -15,7 +15,7 @@ const headerScroll = () => {
 
 		if( ! header ) return
 
-        if ( scrollTop > 300 ) {
+        if ( scrollTop > 0 ) {
             if ( ! header.classList.contains( 'scrolled' ) )
                 header.classList.add( 'scrolled' )
 		}   else {

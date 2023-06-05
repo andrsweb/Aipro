@@ -1,0 +1,60 @@
+.rangeslider {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	height: 26px;
+	width: 152px;
+}
+
+.rangeslider__fill,
+.rangeslider__fill__bg {
+	display: block;
+	position: absolute;
+	top: 50%;
+	height: 2px;
+	z-index: 2;
+	background: $accent1;
+	border-radius: 10px;
+	will-change: width;
+}
+
+.rangeslider__handle {
+	will-change: width, height, top;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 50%;
+	background: #f6f6f6;
+	display: inline-block;
+	z-index: 3;
+	cursor: pointer;
+	border: solid 2px $accent1;
+	border-radius: 50%;
+	-webkit-transition: width 0.1s ease-in-out, height 0.1s ease-in-out, top 0.1s ease-in-out;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out, top 0.1s ease-in-out;
+}
+
+.rangeslider__handle:active {
+	background: $accent1;
+}
+
+.rangeslider__fill__bg {
+	background: $blackened;
+	width: 100%;
+}
+
+.rangeslider--disabled {
+	opacity: 0.4;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+	appearance: none;
+	-moz-appearance: textfield;
+}

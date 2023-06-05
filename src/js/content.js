@@ -1,48 +1,54 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	checkWindowSize()
-})
-
-// resize func
-const checkWindowSize = () => {
-	if (window.innerWidth <= 767) document.body.classList.add('mobile')
-	else document.body.classList.remove('mobile')
-}
-
-window.addEventListener('resize', () => {
-	checkWindowSize()
 })
 
 // Scroll
 window.addEventListener('scroll', () => {
+	const content = document.querySelector('.content__items')
+
+	if (!content) return
+
 	const
 		steps = document.querySelectorAll('.content__item'),
-		imgFixed = document.querySelector('.img__fixed_mobile'),
-		source = document.querySelector('.content__img_wrapper picture source'),
-		content = document.querySelector('.content__items'),
+		images = document.querySelectorAll('.img__fixed_mobile'),
 		contentTop = content.getBoundingClientRect().top,
 		contentBot = content.getBoundingClientRect().bottom
 
-	if (!steps.length || !imgFixed || !document.body.classList.contains('mobile') || ! content) return
-
-	if (contentTop <= document.querySelector( '.header').offsetHeight) {
+	if (contentTop <= document.querySelector('.header').offsetHeight) {
 		content.classList.add('scrolled')
-	
-		if (contentBot <= 360) {
+
+		if (contentBot <= 500) {
 			content.classList.remove('scrolled')
-		} 
+		}
 
 	} else {
 		content.classList.remove('scrolled')
 	}
 
+	let activeStep = steps[0].dataset.id
+
 	steps.forEach(step => {
 		const viewportOffsetY = step.getBoundingClientRect().top
 
-		if (viewportOffsetY <= 380) {
-			imgFixed.src = step.querySelector('img').src
-			source.srcset = step.querySelector('img').src
-		}
+		if( viewportOffsetY > 380 ) return
+
+		activeStep = getLastActiveStep( steps )
+
+		images.forEach( ( img, i, arr ) => {
+			if( img.dataset.id === activeStep && img.classList.contains( 'hidden' ) ){
+				arr.forEach( image => image.classList.add( 'hidden' ) )
+				img.classList.remove( 'hidden' )
+			}
+		})
 	})
 })
+
+const getLastActiveStep = arr => {
+	for( let i = arr.length - 1; i >= 0; i-- ){
+		const viewportOffsetY = arr[i].getBoundingClientRect().top
+
+		if( viewportOffsetY <= 380 ) return arr[i].dataset.id
+	}
+}

@@ -1,0 +1,361 @@
+.fields {
+	.fields__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 20px;
+		line-height: 28px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 4px;
+	}
+
+	&__subtitle {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.01em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #707070;
+		margin-bottom: 15px;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.field {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px dashed #707070;
+	border-radius: 24px;
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-regular;
+	font-size: 14px;
+	line-height: 24px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #c5cacf;
+	margin-bottom: 8px;
+	width: 320px;
+	height: 250px;
+
+	@media all and (min-width: $sm) {
+		width: 400px;
+	}
+
+	@media all and (min-width: $lg) {
+		width: 340px;
+	}
+
+	@media all and (min-width: $xxl) {
+		width: 573px;
+		height: 244px;
+	}
+
+	&.full {
+		margin-bottom: 5px;
+	}
+
+	&__item {
+		cursor: pointer;
+		position: relative;
+
+		&.selected {
+			.field__checkbox {
+				background-color: $accent1;
+				border-color: $accent1;
+			}
+
+			.field__item_tries {
+				display: flex;
+				animation: opacity $tr forwards linear;
+
+				@keyframes opacity {
+					0% {
+						display: flex;
+						opacity: 0;
+					}
+	
+					100% {
+						display: flex;
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&_tries {
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			padding: 10px 42px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: rgba(255, 255, 255, 0.8);
+			backdrop-filter: blur(4px);
+
+			.field__item_left {
+				font-family: $ff-title;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 16px;
+				text-align: center;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: $blackened;
+			}
+
+			.field__item_regenerate {
+				font-family: $ff;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 16px;
+				text-align: center;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+				color: #707070;
+				transition: color ease $tr;
+			
+				&:hover {
+					color: $blackened;
+				}
+			}
+		}
+	}
+
+	&.field_items {
+		border: 0;
+		border-radius: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.full {
+		width: 100%;
+		padding: 24px;
+		height: auto;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		border: 1px solid #707070;
+		cursor: pointer;
+
+		&.selected {
+			.radio {
+				border-color: $accent1;
+
+				& span {
+					position: absolute;
+					top: 50%;
+					left: -35%;
+					transform: translateY(-50%);
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					background-color: $accent1;
+					animation: scale 0.3s ease forwards;
+		
+					@keyframes scale {
+						0% {
+							scale: 0;
+						}
+		
+						100% {
+							scale: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__option {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+
+		input {
+			width: 20px;
+			height: 20px;
+			margin: 0;
+			margin-right: 10px;
+		}
+
+		span {
+			font-family: $ff-title;
+			font-style: normal;
+			font-weight: $fw-regular;
+			font-size: 14px;
+			line-height: 24px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: $blackened;
+			margin-left: 8px;
+		}
+
+
+		label {
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+	}
+}
+
+.order {
+	display: none;
+	flex-direction: column;
+	margin-left: 40px;
+	width: 267px;
+	height: 696px;
+
+	@media all and (min-width: $lg) {
+		display: flex;
+		width: 50%;
+	}
+
+	@media all and (min-width: $xxl) {
+		display: flex;
+		width: calc( 37% - 40px );
+	}
+
+	&__title {
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 20px;
+		line-height: 28px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+		margin-bottom: 16px;
+	}
+
+	&__text_wrapper,
+	&__total_wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		line-height: 24px;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $blackened;
+	}
+
+	&__total_wrapper {
+		font-weight: $fw-bold;
+		font-size: 16px;
+		margin-top: 8px;
+	}
+
+	.button_header {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		padding: 15px 66px;
+		font-size: 16px;
+		max-width: 267px;
+
+		img {
+			margin-left: 12px;
+		}
+	}
+
+	&__button {
+		margin-top: auto;
+	}
+
+	&__minimum {
+		display: flex;
+		align-items: center;
+		background-color: #FFE6C1;
+		padding: 10px;
+		border-radius: 16px;
+		margin-bottom: 16px;
+
+		.minimum__img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 20px;
+			margin-right: 10px;
+		}
+
+		.minimum__text {
+			width: calc(100% - 40px);
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 16px;
+			line-height: 24px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #B96F00;
+		}
+	}
+}
+
+.fields__wrapper {
+	&.begin {
+		display: none;
+		opacity: 0;
+	}
+	
+	&.first_wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		@media all and (min-width: $lg) {
+			width: auto;
+			justify-content: flex-start;
+		}
+
+		&.begin {
+			display: none;
+		}
+	}
+}
+
+.radio {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border: 2px solid $blackened;
+	border-radius: 50%;
+	background-color: $white;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: border-color ease $tr;
+}
+
+.field__full_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+}

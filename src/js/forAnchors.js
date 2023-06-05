@@ -7,7 +7,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	smoothScrollForAnchors()
 } )
 
-
 const smoothScrollForAnchors = () => {
 	const anchors = document.querySelectorAll( '.anchor' )
 		if ( ! anchors ) return

@@ -45,3 +45,11 @@
 @import 'sections/dashboard/dashboard-settings';
 @import 'sections/dashboard/dashboard-help';
 @import 'sections/dashboard/popups';
+
+//Post page styles
+@import './sections/post/post';
+@import './sections/post/aside';
+@import './sections/post/post-right';
+@import './sections/post/range';
+@import './sections/post/order';
+@import './sections/post/failed-succes';

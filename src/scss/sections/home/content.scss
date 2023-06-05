@@ -17,9 +17,80 @@
 		justify-content: center;
 		margin-bottom: 40px;
 		position: static;
+		animation: fade 1s forwards;
 
-		@media all and (min-width: $md) {
-			display: none;
+		@media all and (min-width: $xl) {
+			width: auto;
+			justify-content: flex-start;
+		}
+
+		@keyframes fade {
+			0% {
+				display: flex;
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.img__fixed_mobile {
+			width: 312px;
+			height: 312px;
+			animation: fade 0.5s forwards linear;
+
+			@keyframes fade {
+				0% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
+
+			@media all and (min-width: 400px) {
+				width: 380px;
+				height: 380px;
+			}
+
+			@media all and (min-width: $sm) {
+				width: 420px;
+				height: 420px;
+			}
+
+			@media all and (min-width: $md) {
+				width: 626px;
+				height: 626px;
+			}
+
+			&.hidden {
+				display: none;
+			}
+		}
+	}
+
+	&__img {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		position: relative;
+
+		@media all and (min-width: $xl) {
+			width: 59%;
+		}
+	}
+
+	&__texts {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding-top: 220px;
+
+		@media all and (min-width: $xl) {
+			width: 41%;
 		}
 	}
 
@@ -27,19 +98,52 @@
 		display: flex;
 		flex-direction: column;
 
+		@media all and (min-width: $xl) {
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+
 		&.scrolled {
-			padding-top: 352px;
 
 			.content__img_wrapper {
 				position: fixed;
 				top: 60px;
 				left: 0;
+
+				@media all and (min-width: $xl) {
+					left: auto;
+				}
+			}
+
+			.content__img {
+				padding-top: 350px;
+
+				@media all and (min-width: 400px) {
+					padding-top: 418px;
+				}
+
+				@media all and (min-width: $sm) {
+					padding-top: 448px;
+				}
+
+				@media all and (min-width: $md) {
+					padding-top: 674px;
+				}
+
+				@media all and (min-width: $xl) {
+					padding-top: 0;
+				}
 			}
 		}
 	}
 
 	&__item {
 		margin-bottom: 40px;
+		width: 100%;
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 434px;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -52,37 +156,6 @@
 
 			@media all and (min-width: $lg) {
 				flex-direction: row;
-			}
-		}
-
-		&_texts {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-
-			@media all and (min-width: $lg) {
-				width: 41%;
-			}
-		}
-
-		&_img {
-			display: flex;
-			justify-content: center;
-			margin-bottom: 40px;
-			width: 100%;
-
-			@media all and (min-width: $lg) {
-				justify-content: flex-start;
-				width: calc( 59% - 120px );
-				margin-right: 120px;
-			}
-
-			&.off {
-				display: none;
-
-				@media all and (min-width: $md) {
-					display: block;
-				}
 			}
 		}
 

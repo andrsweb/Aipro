@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
 	toogleDropdown()
+	insertTextInInput()
 })
 
 const toogleDropdown = () => {
@@ -47,4 +48,18 @@ const reCalculateDropdownHeight = dropdown => {
 	if (!dropdownOpen || !dropdownInner) return
 
 	dropdownOpen.style.height = `${dropdownInner.getBoundingClientRect().height}px`
+}
+
+const insertTextInInput = () => {
+	const dropdownItem = document.querySelectorAll( '.dropdown_item' )
+	const dropdownArea = document.querySelector( '.dropdown_area' )
+
+	if( ! dropdownItem.length && ! dropdownArea ) return
+
+	dropdownItem.forEach( item => {
+		item.addEventListener( 'click', e => {
+			const target = e.target
+			dropdownArea.innerHTML = target.textContent.trim()
+		} )
+	} )
 }

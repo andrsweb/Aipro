@@ -21,3 +21,22 @@ import './popups'
 
 //slides
 import './swiper'
+import './range-slider'
+
+//tabs
+import './tabs'
+
+//for post
+import './forImages'
+
+//aside
+import './aside'
+
+//for textarea
+import './forTextArea'
+
+//google
+import './googleSignin'
+
+//mask
+import './mask'

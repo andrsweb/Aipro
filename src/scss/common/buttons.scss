@@ -1,4 +1,6 @@
 .button {
+	display: flex;
+	justify-content: center;
 	font-family: $ff;
 	font-style: normal;
 	font-weight: $fw-bold;
@@ -22,12 +24,30 @@
 	&.button_header {
 		display: none;
 
+		&.dropdown__button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			max-width: 312px;
+			font-size: 16px;
+			padding: 14px 16px;
+
+			img {
+				margin-left: 8px;
+			}
+
+			@media all and (min-width: $lg) {
+				display: none;
+			}
+		}
+
 		@media all and (min-width: $md) {
-			display: block;
+			display: flex;
 		}
 
 		&.header_mobile {
-			display: block;
+			display: flex;
 
 			@media all and (min-width: $md) {
 				display: none;
@@ -53,7 +73,7 @@
 	font-family: $ff;
 	font-style: normal;
 	font-weight: $fw-bold;
-	font-size: 16px;
+	font-size: 12px;
 	line-height: 16px;
 	display: flex;
 	align-items: center;
@@ -92,6 +112,26 @@
 	@media all and (min-width: $md) {
 		font-size: 16px;
 		padding: 12px 54px;
+	}
+
+	&.dropdown__button_black {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 312px;
+		font-size: 16px;
+		margin-top: 8px;
+		padding: 16px 34px;
+
+		@media all and (min-width: 576px) {
+			margin-top: 0;
+			margin-left: 8px;
+		}
+
+		img {
+			margin-right: 11px;
+		}
 	}
 }
 
