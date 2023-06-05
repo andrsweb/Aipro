@@ -32,23 +32,23 @@ window.addEventListener('scroll', () => {
 	steps.forEach(step => {
 		const viewportOffsetY = step.getBoundingClientRect().top
 
-		if( viewportOffsetY > 380 ) return
+		if (viewportOffsetY > 380) return
 
-		activeStep = getLastActiveStep( steps )
+		activeStep = getLastActiveStep(steps)
 
-		images.forEach( ( img, i, arr ) => {
-			if( img.dataset.id === activeStep && img.classList.contains( 'hidden' ) ){
-				arr.forEach( image => image.classList.add( 'hidden' ) )
-				img.classList.remove( 'hidden' )
+		images.forEach((img, i, arr) => {
+			if (img.dataset.id === activeStep && img.classList.contains('hidden')) {
+				arr.forEach(image => image.classList.add('hidden'))
+				img.classList.remove('hidden')
 			}
 		})
 	})
 })
 
 const getLastActiveStep = arr => {
-	for( let i = arr.length - 1; i >= 0; i-- ){
+	for (let i = arr.length - 1; i >= 0; i--) {
 		const viewportOffsetY = arr[i].getBoundingClientRect().top
 
-		if( viewportOffsetY <= 380 ) return arr[i].dataset.id
+		if (viewportOffsetY <= 380) return arr[i].dataset.id
 	}
 }

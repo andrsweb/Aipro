@@ -51,15 +51,15 @@ const reCalculateDropdownHeight = dropdown => {
 }
 
 const insertTextInInput = () => {
-	const dropdownItem = document.querySelectorAll( '.dropdown_item' )
-	const dropdownArea = document.querySelector( '.dropdown_area' )
+	const dropdownItem = document.querySelectorAll('.dropdown_item')
+	const dropdownArea = document.querySelector('.dropdown_area')
 
-	if( ! dropdownItem.length && ! dropdownArea ) return
+	if (!dropdownItem.length && !dropdownArea) return
 
-	dropdownItem.forEach( item => {
-		item.addEventListener( 'click', e => {
+	dropdownItem.forEach(item => {
+		item.addEventListener('click', e => {
 			const target = e.target
 			dropdownArea.innerHTML = target.textContent.trim()
-		} )
-	} )
+		})
+	})
 }

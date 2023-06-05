@@ -1,75 +1,75 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import { setTargetElement, getTargetElement } from './common/global'
 
-document.addEventListener( 'DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
 	headerScroll()
 	toggleBurgerMenu()
-} )
+})
 
 const headerScroll = () => {
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY
-        const header = document.querySelector( '.header' )
+	window.addEventListener('scroll', () => {
+		const scrollTop = window.scrollY
+		const header = document.querySelector('.header')
 
-		if( ! header ) return
+		if (!header) return
 
-        if ( scrollTop > 0 ) {
-            if ( ! header.classList.contains( 'scrolled' ) )
-                header.classList.add( 'scrolled' )
-		}   else {
-            header.classList.remove( 'scrolled' )
-        }
-    })
+		if (scrollTop > 0) {
+			if (!header.classList.contains('scrolled'))
+				header.classList.add('scrolled')
+		} else {
+			header.classList.remove('scrolled')
+		}
+	})
 }
 
 const toggleBurgerMenu = () => {
-	const burgerButton  = document.querySelector( '.burger-button' )
-	const burgerMenu    = document.querySelector( '.header-wrapper' )
-	setTargetElement( document.querySelector( '#body-lock' ) )
+	const burgerButton = document.querySelector('.burger-button')
+	const burgerMenu = document.querySelector('.header-wrapper')
+	setTargetElement(document.querySelector('#body-lock'))
 
-	if( ! burgerButton || ! burgerMenu ) return
+	if (!burgerButton || !burgerMenu) return
 
-	burgerButton.addEventListener( 'click', () => {
+	burgerButton.addEventListener('click', () => {
 
-		if( ! burgerButton && ! burgerMenu ) return
+		if (!burgerButton && !burgerMenu) return
 
-		if( ! burgerMenu.classList.contains( 'opened' ) ) {
-			burgerMenu.classList.add( 'opened' )
-			burgerButton.classList.add( 'opened' )
-			disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
+		if (!burgerMenu.classList.contains('opened')) {
+			burgerMenu.classList.add('opened')
+			burgerButton.classList.add('opened')
+			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
 
 		} else {
-			burgerMenu.classList.remove( 'opened' )
-			burgerButton.classList.remove( 'opened' )
-			enableBodyScroll( getTargetElement() )
+			burgerMenu.classList.remove('opened')
+			burgerButton.classList.remove('opened')
+			enableBodyScroll(getTargetElement())
 		}
-	} )
+	})
 
-	document.addEventListener( 'click', e => {
+	document.addEventListener('click', e => {
 		e.stopPropagation()
 		const target = e.target
 
 		if (
-			! target.className ||
-			target.classList.contains( 'header-wrapper' ) ||
-			target.classList.contains( 'burger-button' )
+			!target.className ||
+			target.classList.contains('header-wrapper') ||
+			target.classList.contains('burger-button')
 		) return
 
-		burgerMenu.classList.remove( 'opened' )
-		burgerButton.classList.remove( 'opened' )
-		enableBodyScroll( getTargetElement() )
-	} )
+		burgerMenu.classList.remove('opened')
+		burgerButton.classList.remove('opened')
+		enableBodyScroll(getTargetElement())
+	})
 
-	window.addEventListener( 'resize', () => {
+	window.addEventListener('resize', () => {
 		const windowWidth = window.innerWidth
 		const WINDOW_WIDTH_MD = 768
-	
-		if( windowWidth >= WINDOW_WIDTH_MD &&  burgerMenu.classList.contains( 'opened' ) ) {
-			burgerMenu.classList.remove( 'opened' )
-			burgerButton.classList.remove( 'opened' )
-			enableBodyScroll( getTargetElement() )
+
+		if (windowWidth >= WINDOW_WIDTH_MD && burgerMenu.classList.contains('opened')) {
+			burgerMenu.classList.remove('opened')
+			burgerButton.classList.remove('opened')
+			enableBodyScroll(getTargetElement())
 		}
-	} )
+	})
 }
