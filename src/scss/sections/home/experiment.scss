@@ -145,6 +145,14 @@
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: $white;
 		margin-top: 16px;
+		width: 219px;
+		height: 199px;
+		overflow: hidden;
+
+		@media all and (min-width: $md) {
+			width: 342px;
+			height: 216px;
+		}
 	}
 
 	.swiper-slide {
