@@ -3,12 +3,12 @@ import Swiper from 'swiper';
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	initSwiper('.swiper.experiment__swiper', 2, 2, 2, 2)
-	initSwiper('.swiper.texts__swiper', 1, 'auto', 2, 3)
+	initSwiper('.swiper.experiment__swiper', 2, 2, 2, 2, 2)
+	initSwiper('.swiper.texts__swiper', 1, 'auto', 2, 2, 3)
 
 })
 
-const initSwiper = (selector, perView, xs, s, md) => {
+const initSwiper = (selector, perView, xs, s, md, xl) => {
 	if (!selector) return
 
 	const swiper = new Swiper(selector, {
@@ -28,6 +28,10 @@ const initSwiper = (selector, perView, xs, s, md) => {
 
 			767: {
 				slidesPerView: md,
+			},
+
+			1200: {
+				slidesPerView: xl,
 			}
 		}
 	})
