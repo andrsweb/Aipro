@@ -15,7 +15,6 @@ const initSwiper = (selector, perView, xs, s, md, xl) => {
 		direction: 'horizontal',
 		slidesPerView: perView,
 		spaceBetween: 16,
-		grabCursor: true,
 
 		breakpoints: {
 			320: {

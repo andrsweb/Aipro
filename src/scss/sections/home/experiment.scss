@@ -2,6 +2,14 @@
 	background-color: $blackened;
 	padding: 120px 0;
 
+	.container {
+		padding: 0;
+
+		@media all and (min-width: $md) {
+			padding: 0 20px;
+		}
+	}
+
 	&__img {
 		margin-bottom: 16px;
 	}
@@ -103,12 +111,7 @@
 	&::after {
 		content: url( '../img/experiment/ico.png' );
 		margin-top: 5px;
-		cursor: pointer;
 		transition: opacity ease $tr;
-	}
-
-	&:hover::after {
-		opacity: $op;
 	}
 }
 
@@ -155,12 +158,27 @@
 		}
 	}
 
+	.swiper-wrapper {
+		padding: 0 20px;
+
+		@media all and (min-width: $lg) {
+			padding: 0;
+		}
+	}
+
 	.swiper-slide {
 		width: 280px;
 		height: 327px;
 		border: 2px solid #FFFFFF;
 		border-radius: 48px;
 		padding: 24px;
+		cursor: pointer;
+
+		&:hover {
+			.desc__text::after {
+				opacity: $op;
+			}
+		}
 
 		&.swiper-slide-active {
 			width: 280px;

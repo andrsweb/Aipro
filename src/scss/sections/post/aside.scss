@@ -198,6 +198,11 @@
 		&::-webkit-scrollbar {
 			width: 0px;
 		}
+
+		&::placeholder {
+			color: #707070;
+			opacity: 1;
+		}
 	}
 
 	.range__wrapper {
