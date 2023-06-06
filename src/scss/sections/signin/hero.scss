@@ -27,7 +27,7 @@
 		max-width: 303px;
 
 		@media all and (min-width: $md) {
-			max-width: 396px;
+			max-width: 412px;
 		}
 	}
 
@@ -89,6 +89,7 @@
 
 	&_form {
 		margin-top: 2px;
+		padding: 0 8px;
 
 		fieldset {
 			display: flex;
@@ -262,7 +263,7 @@ label {
 	line-height: 24px;
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: $blackened;
-	padding: 12px 16px;
+	padding: 11px 16px;
 	border: 1px solid #C5CACF;
 	border-radius: 24px;
 	background-color: $white;
