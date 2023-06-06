@@ -47,6 +47,14 @@
 		background-color: $accent1;
 		color: $white;
 
+		&.hero_button {
+			min-width: 229px;
+
+			@media all and (min-width: $lg) {
+				min-width: 165px;
+			}
+		}
+
 		&:disabled {
 			opacity: $op;
 		}
