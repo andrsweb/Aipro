@@ -18,6 +18,7 @@
 		margin-bottom: 40px;
 		position: static;
 		animation: fade 1s forwards;
+		background-color: #f6f6f6;
 
 		@media all and (min-width: $xl) {
 			width: auto;
@@ -50,17 +51,7 @@
 				}
 			}
 
-			@media all and (min-width: 400px) {
-				width: 380px;
-				height: 380px;
-			}
-
-			@media all and (min-width: $sm) {
-				width: 420px;
-				height: 420px;
-			}
-
-			@media all and (min-width: $md) {
+			@media all and (min-width: $xxl) {
 				width: 626px;
 				height: 626px;
 			}

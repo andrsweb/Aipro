@@ -5,17 +5,19 @@
 		</h1>
 		<form class="signin__hero_form">
 			<fieldset>
-				<label for="signin-email">
+				<label for="new-password">
 					New password
 				</label>
-				<input class="signin__input" type="email" name="signin-email" id="signin-email">
-				<label for="signin-password">
+				<span class="input__wrapper first_wrapper">
+					<input class="signin__input last_input input_margin" type="password" name="new-password" id="new-password">
+					@@include( '../signin/eye.html' )
+				</span>
+				<label for="reenter-password">
 					Re-enter new password
 				</label>
 				<span class="input__wrapper">
-					<input class="signin__input last_input" type="password" name="signin-password" id="signin-password">
+					<input class="signin__input last_input" type="password" name="reenter-password" id="reenter-password">
 					@@include( '../signin/eye.html' )
-					@@include( '../signin/eye-closed.html' )
 				</span>
 				<button class="signin-button submit_button">
 					Reset password
