@@ -27,12 +27,11 @@ const headerScroll = () => {
 const toggleBurgerMenu = () => {
 	const burgerButton = document.querySelector('.burger-button')
 	const burgerMenu = document.querySelector('.header-wrapper')
-	setTargetElement(document.querySelector('#body-lock'))
 
 	if (!burgerButton || !burgerMenu) return
 
 	burgerButton.addEventListener('click', () => {
-
+		setTargetElement(document.querySelector('#body-lock'))
 		if (!burgerButton && !burgerMenu) return
 
 		if (!burgerMenu.classList.contains('opened')) {
@@ -48,6 +47,7 @@ const toggleBurgerMenu = () => {
 	})
 
 	document.addEventListener('click', e => {
+		setTargetElement(document.querySelector('#body-lock'))
 		e.stopPropagation()
 		const target = e.target
 
@@ -63,6 +63,7 @@ const toggleBurgerMenu = () => {
 	})
 
 	window.addEventListener('resize', () => {
+		setTargetElement(document.querySelector('#body-lock'))
 		const windowWidth = window.innerWidth
 		const WINDOW_WIDTH_MD = 768
 

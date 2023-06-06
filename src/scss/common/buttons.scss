@@ -17,6 +17,13 @@
 			background-color ease $tr,
 			color ease $tr;
 
+	&.header_button {
+		min-width: 135.7px;
+		padding: 12px 16px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+
 	&.xs_button {
 		min-width: 147px;
 		font-size: 12px;

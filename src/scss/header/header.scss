@@ -25,7 +25,6 @@
 		justify-content: space-between;
 
 		&.opened {
-
 			.header-nav {
 				background-color: $white;
 				display: flex;
@@ -132,6 +131,23 @@
 				color: $accent1;
 			}
 		}
+
+		@media all and (min-width: $md) {
+			display: flex;
+		}
+	}
+
+	&_mobile {
+		display: flex;
+		border: 0;
+
+		@media all and (min-width: $md) {
+			display: none;
+		}
+	}
+
+	&_desktop {
+		display: none;
 
 		@media all and (min-width: $md) {
 			display: flex;
