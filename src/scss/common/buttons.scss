@@ -13,6 +13,7 @@
 	text-align: center;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
+	white-space: nowrap;
 	transition: opacity ease $tr,
 			background-color ease $tr,
 			color ease $tr;
