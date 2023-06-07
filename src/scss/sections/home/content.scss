@@ -23,6 +23,7 @@
 		@media all and (min-width: $xl) {
 			width: auto;
 			justify-content: flex-start;
+			background-color: transparent;
 		}
 
 		@keyframes fade {
@@ -40,6 +41,11 @@
 			width: 312px;
 			height: 312px;
 			animation: fade 0.5s forwards linear;
+
+			@media all and (min-width: 576px) {
+				width: 200px;
+				height: 200px;
+			}
 
 			@keyframes fade {
 				0% {
@@ -78,10 +84,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
-		padding-top: 220px;
 
 		@media all and (min-width: $xl) {
 			width: 41%;
+			padding-top: 220px;
 		}
 	}
 
@@ -95,7 +101,6 @@
 		}
 
 		&.scrolled {
-
 			.content__img_wrapper {
 				position: fixed;
 				top: 60px;
@@ -117,8 +122,8 @@
 					padding-top: 448px;
 				}
 
-				@media all and (min-width: $md) {
-					padding-top: 674px;
+				@media all and (min-width: 576px) {
+					padding-top: 240px;
 				}
 
 				@media all and (min-width: $xl) {
@@ -132,7 +137,7 @@
 		margin-bottom: 40px;
 		width: 100%;
 
-		@media all and (min-width: $lg) {
+		@media all and (min-width: $xxl) {
 			margin-bottom: 434px;
 		}
 
