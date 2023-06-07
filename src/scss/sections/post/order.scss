@@ -46,7 +46,12 @@
 
 	.card__info {
 		display: flex;
+		flex-wrap: wrap;
 		margin-bottom: 10px;
+
+		@media all and (min-width: 576px) {
+			flex-wrap: nowrap;
+		}
 
 		.signin__input {
 			margin-bottom: 0;
@@ -54,8 +59,11 @@
 	}
 
 	.card__input {
-		margin-right: 16px;
 		position: relative;
+
+		@media all and (min-width: 576px) {
+			margin-right: 16px;
+		}
 
 		.visa-small {
 			position: absolute;
@@ -79,18 +87,40 @@
 
 		&:first-child {
 			width: 100%;
-			max-width: 274px;
+			max-width: 100%;
+
+			@media all and (min-width: 576px) {
+				max-width: 274px;
+			}
 		}
 
 		&:nth-child(2) {
 			width: 100%;
-			max-width: 120px;
+			max-width: 148px;
+
+			@media all and (min-width: $sm) {
+				max-width: 200px;
+			}
+
+			@media all and (min-width: 576px) {
+				max-width: 120px;
+			}
 		}
 
 		&:last-child {
 			width: 100%;
-			max-width: 120px;
+			max-width: 148px;
 			margin-right: 0;
+			margin-left: auto;
+
+			@media all and (min-width: $sm) {
+				max-width: 200px;
+			}
+
+			@media all and (min-width: 576px) {
+				max-width: 120px;
+				margin-left: 0;
+			}
 		}
 
 		&.cardholder {
@@ -99,18 +129,47 @@
 		}
 	}
 
+	.card__elements {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.card__buttons {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
-		border-bottom: 2px solid $blackened;
 		padding-bottom: 18px;
+		order: 2;
+
+		@media all and (min-width: 576px) {
+			flex-direction: row;
+			order: 1;
+		}
+
+		.black {
+			padding: 16px 56px;
+			margin-bottom: 8px;
+
+			@media all and (min-width: 576px) {
+				min-width: 166px;
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	.card__images {
+		order: 1;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin-top: 15px;
+		margin-bottom: 16px;
+		border-top: 2px solid $blackened;
+		padding-top: 16px;
+
+		@media all and (min-width: 576px) {
+			order: 12;
+		}
 
 		picture {
 			margin-right: 25px;

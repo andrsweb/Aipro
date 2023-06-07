@@ -33,6 +33,7 @@
 
 	&__hero {
 		padding-bottom: 220px;
+		height: 100%;
 
 		@media all and (min-width: $lg) {
 			padding-bottom: 0;

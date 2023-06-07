@@ -392,6 +392,13 @@
 }
 
 .images_aside {
+	.aside__wrapper {
+		overflow-y: auto;
+
+		@media all and (min-width: $xl) {
+			overflow-y: hidden;
+		}
+	}
 	.radio__button {
 		position: absolute;
 		z-index: -1;
