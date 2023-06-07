@@ -98,14 +98,18 @@
 			padding: 12.5px 16px;
 			font-size: 12px;
 
-		@media all and (min-width: $md) {
-			min-width: 356px;
-			font-size: 16px;
+			@media all and (min-width: $md) {
+				min-width: 356px;
+				font-size: 16px;
+			}
+
+			img {
+				margin-right: 8px;
+			}
 		}
 
-		img {
-			margin-right: 8px;
-		}
+		&.delete_button {
+			background-color: $accent-hover-dark;
 		}
 
 		&:disabled {
