@@ -108,6 +108,7 @@
 					transform: translateY( -50% );
 					cursor: pointer;
 					transition: opacity ease $tr;
+					z-index: 10;
 
 					&.clicked {
 						&::before {
@@ -268,6 +269,7 @@ label {
 	border-radius: 24px;
 	background-color: $white;
 	margin-bottom: 6px;
+	position: relative;
 
 	&.last_input {
 		margin-bottom: 0;
@@ -293,5 +295,26 @@ label {
 		line-height: 24px;
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: $blackened;
+	}
+}
+
+.error {
+	.signin__input {
+		margin-bottom: 4px;
+		border: 1px solid #F02215;
+	
+	}
+
+	&__text {
+		font-family: $ff-title;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 12px;
+		line-height: 16px;
+		display: flex;
+		align-items: center;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #F02215;
+		padding-left: 18px;
 	}
 }
