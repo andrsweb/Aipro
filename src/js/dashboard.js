@@ -29,11 +29,6 @@ const showSettings = () => {
 	const dashboardsSettings = document.querySelector('.dashboard__settings')
 
 	if (!settings && !projects && !dashboardsSettings) return
-
-	settings.addEventListener('click', () => {
-		projects.style = 'display: none'
-		dashboardsSettings.style = 'display: block'
-	})
 }
 
 const upDateEmail = () => {

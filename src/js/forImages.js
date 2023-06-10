@@ -3,33 +3,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	addSelected('.field__item')
 	addSelected('.field.full')
+	addTries()
 })
-
-let tries = document.querySelectorAll('.field__item_left span')
-let count = 0
-const incrCount = () => {
-	count = count + 1
-}
 
 const addSelected = (selector) => {
 	const images = document.querySelectorAll(selector)
 
 
-	if (!images.length && tries.length) return
-
-	tries.forEach(tri => {
-		tri.textContent = count
-	})
+	if (!images.length) return
 
 	images.forEach(image => {
 		image.addEventListener('click', () => {
 
 			if (!image.classList.contains('selected')) {
 				image.classList.add('selected')
-				incrCount()
+
 			} else {
 				image.classList.remove('selected')
 			}
 		})
 	})
 }
+
+const addTries = () => {
+	const tries = document.querySelectorAll('.trie')
+	const items = document.querySelectorAll('.field__item')
+
+	tries.forEach(trie => {
+		trie.textContent = 0
+	})
+
+	items.forEach(item => {
+		item.addEventListener('click', () => {
+			if (item.classList.contains('selected')) {
+				tries.forEach(trie => {
+					parseInt(trie.textContent)
+					trie.textContent++
+				})
+			}
+		})
+
+		item.addEventListener('click', () => {
+			if (!item.classList.contains('selected')) {
+				tries.forEach(trie => {
+					parseInt(trie.textContent)
+					if (parseInt(trie.textContent) === 0) {
+						return
+					}
+					trie.textContent--
+				})
+			}
+		})
+	})
+}
+

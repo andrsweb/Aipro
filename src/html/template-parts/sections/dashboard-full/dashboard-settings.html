@@ -1,54 +1,57 @@
-<div class="dashboard__settings">
-	<h2>
-		Account settings
-	</h2>
-	<div class="dashboard__settings_items">
-		<div class="dashboard__settings_item">
-			<p class="dashboard__settings_title">
-				Email update
-			</p>
-			<p class="dashboard__settings_email">
-				<form>
-					<fieldset>
-						<label for="dashboard-settings-email">
-							Email
-						</label>
-						<input class="signin__input" type="email" name="dashboard-settings-email" id="dashboard-settings-email">
-					</fieldset>
-				</form>
-			</p>
-			<button class="button black update_email" type="button">
-				Update
-			</button>
-		</div>
-		<div class="dashboard__settings_item">
-			<p class="dashboard__settings_title">
-				Password
-			</p>
-			<p class="dashboard__settings_desc">
-				You can set a change password if you want
-			</p>
-			<button class="button black change_password" type="button">
-				Change password
-			</button>
-		</div>
-		<div class="dashboard__settings_item">
-			<p class="dashboard__settings_title">
-				Delete account
-			</p>
-			<p class="dashboard__settings_desc">
-				Permanently delete your account and all of your content.
-			</p>
-			<button class="button black delete_button" type="button">
-				Delete this account
-			</button>
+<section class="dashboard__settings">
+	<div class="dashboard__hero">
+		<div class="container">
+			<h2>
+				Account settings
+			</h2>
+			<div class="dashboard__settings_items">
+				<div class="dashboard__settings_item">
+					<p class="dashboard__settings_title">
+						Email update
+					</p>
+					<p class="dashboard__settings_email">
+						<form>
+							<fieldset>
+								<label for="dashboard-settings-email">
+									Email
+								</label>
+								<input class="signin__input" type="email" name="dashboard-settings-email" id="dashboard-settings-email">
+							</fieldset>
+						</form>
+					</p>
+					<button class="button black update_email" type="button">
+						Update
+					</button>
+				</div>
+				<div class="dashboard__settings_item">
+					<p class="dashboard__settings_title">
+						Password
+					</p>
+					<p class="dashboard__settings_desc">
+						You can set a change password if you want
+					</p>
+					<button class="button black change_password" type="button">
+						Change password
+					</button>
+				</div>
+				<div class="dashboard__settings_item">
+					<p class="dashboard__settings_title">
+						Delete account
+					</p>
+					<p class="dashboard__settings_desc">
+						Permanently delete your account and all of your content.
+					</p>
+					<button class="button black delete_button" type="button">
+						Delete this account
+					</button>
+				</div>
+			</div>
+			<div class="dashboard__notification">
+				<img src="img/dashboard/check.svg" width="20" height="20" alt="">
+				Email updated
+			</div>
 		</div>
 	</div>
-	<div class="dashboard__notification">
-		<img src="img/dashboard/check.svg" width="20" height="20" alt="">
-		Email updated
-	</div>
-</div>
+</section>
 	@@include( './delete-popup.html' )
 	@@include( './password-popup.html' )
-</section>
