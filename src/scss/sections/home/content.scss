@@ -11,13 +11,28 @@
 		margin-bottom: 24px;
 	}
 
+	&__img_inner {
+		position: relative;
+		width: 312px;
+		height: 312px;
+
+		@media all and (min-width: 576px) {
+			width: 200px;
+			height: 200px;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 626px;
+			height: 626px;
+		}
+	}
+
 	&__img_wrapper {
 		width: 100%;
 		display: flex;
 		justify-content: center;
 		margin-bottom: 40px;
 		position: static;
-		animation: fade 1s forwards;
 		background-color: #f6f6f6;
 
 		@media all and (min-width: $xl) {
@@ -26,44 +41,26 @@
 			background-color: transparent;
 		}
 
-		@keyframes fade {
-			0% {
-				display: flex;
-				opacity: 0;
-			}
-
-			100% {
-				opacity: 1;
-			}
-		}
-
 		.img__fixed_mobile {
 			width: 312px;
 			height: 312px;
-			animation: fade 0.5s forwards linear;
+			transition: opacity ease 1s;
+			position: absolute;
+			left: 0;
 
 			@media all and (min-width: 576px) {
 				width: 200px;
 				height: 200px;
 			}
 
-			@keyframes fade {
-				0% {
-					opacity: 0;
-				}
-
-				100% {
-					opacity: 1;
-				}
-			}
-
-			@media all and (min-width: $xxl) {
+			@media all and (min-width: $xl) {
 				width: 626px;
 				height: 626px;
 			}
 
 			&.hidden {
-				display: none;
+				transition: opacity ease 1s;
+				opacity: 0;
 			}
 		}
 	}

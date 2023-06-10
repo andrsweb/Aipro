@@ -40,7 +40,6 @@ window.addEventListener('scroll', () => {
 			if (img.dataset.id === activeStep && img.classList.contains('hidden')) {
 				arr.forEach(image => image.classList.add('hidden'))
 				img.classList.remove('hidden')
-				setTimeout(() => img.classList.add('visible'), 30);
 			}
 		})
 	})
