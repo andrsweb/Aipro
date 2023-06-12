@@ -327,11 +327,13 @@
 	}
 }
 
-#eXeB8WRTGK11 {
+#svg {
 	width: 100%;
 	max-width: 420px;
 	height: 70px;
-	animation: svg 2s linear infinite normal forwards;
+	
+	path {
+		animation: svg 2s linear infinite normal forwards;
 
 	@keyframes svg { 
 			0% {
@@ -342,6 +344,7 @@
 				stroke-dashoffset: 238;
 			}
 		}
+	}
 }
 
 .header__breadcrumbs {
