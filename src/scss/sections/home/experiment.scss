@@ -5,8 +5,24 @@
 	.container {
 		padding: 0;
 
-		@media all and (min-width: $md) {
+		@media all and (min-width: $lg) {
 			padding: 0 20px;
+		}
+	}
+
+	h2 {
+		padding: 0 20px;
+
+		@media all and (min-width: $lg) {
+			padding: 0;
+		}
+	}
+
+	h3 {
+		padding: 0 20px;
+
+		@media all and (min-width: $lg) {
+			padding: 0;
 		}
 	}
 
@@ -96,6 +112,11 @@
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: $white;
 	margin-bottom: 40px;
+	padding: 0 20px;
+
+	@media all and (min-width: $md) {
+		padding: 0;
+	}
 }
 
 .desc__text {
@@ -161,7 +182,7 @@
 	.swiper-wrapper {
 		padding: 0 20px;
 
-		@media all and (min-width: $lg) {
+		@media all and (min-width: $md) {
 			padding: 0;
 		}
 	}
