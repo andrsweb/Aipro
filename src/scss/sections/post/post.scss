@@ -2,7 +2,7 @@
 	background-color: #F6F6F6;
 
 	.container {
-		max-width: 1310px;
+		max-width: 1235px;
 	}
 
 	&__zone {
@@ -11,7 +11,7 @@
 		justify-content: space-between;
 
 		@media all and (min-width: $lg) {
-			width: calc( 100% - 320px );
+			width: calc( 100% - 280px );
 		}
 
 		@media all and (min-width: $xl) {
@@ -123,10 +123,6 @@
 		flex-direction: column;
 		height: 100%;
 		position: relative;
-
-		@media all and (min-width: $lg) {
-			padding-right: 30px;
-		}
 	}
 
 	.fields__wrapper {
@@ -145,14 +141,10 @@
 			width: 70%;
 		}
 
-		@media all and (min-width: $xxl) {
-			width: 63%;
-		}
-
 		&.second_wrapper {
 			display: flex;
 			flex-direction: column;
-			
+			justify-content: flex-start;
 		}
 	}
 
@@ -254,6 +246,7 @@
 
 	&.images_items {
 		width: 100%;
+		padding-right: 11px;
 
 		.field__item {
 			picture {
