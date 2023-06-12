@@ -345,7 +345,7 @@
 			
 			span {
 				top: 50%;
-				transform: translateY(-50%)
+				transform: translateY(-15%)
 					rotate(-45deg);
 			}
 
@@ -367,7 +367,7 @@
 				top: 50%;
 				border-right: 2px solid $blackened;
 				border-top: 2px solid $blackened;
-				transform: translateY( -50%)
+				transform: translateY( -70%)
 					rotate(135deg);
 
 				&::before {
