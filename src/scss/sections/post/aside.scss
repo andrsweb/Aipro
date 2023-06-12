@@ -305,8 +305,8 @@
 
 	.dropdown {
 		margin-bottom: 16px;
-		cursor: pointer;
 		max-width: 240px;
+		position: relative;
 
 		&_area {
 			height: 48px;
@@ -314,13 +314,14 @@
 
 		&__inner {
 			width: 100%;
+			cursor: pointer;
 		}
 
 		&__open {
 			background-color: $white;
-			transition: padding ease 0.1s;
 			display: flex;
 			align-items: center;
+			transition: height ease 0s;
 		}
 
 		.signin__input {
@@ -329,42 +330,45 @@
 
 		&.opened {
 			.signin__input {
-				border-bottom-left-radius: 0;
-				border-bottom-right-radius: 0;
-				border-bottom: 0;
 				margin-bottom: 0;
 			}
 
 			.dropdown__open {
-				border-left: 1px solid #C5CACF;
-				border-top-left-radius: 0px;
-				border-right: 1px solid #C5CACF;
-				border-top-right-radius: 0px;
-				border-bottom: 1px solid #C5CACF;
-				border-bottom-left-radius: 24px;
-				border-bottom-right-radius: 24px;
-				padding: 20px;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top: 110%;
+				border: 1px solid #C5CACF;
+				border-radius: $bord;
+				z-index: 1;
 			}
 			
 			span {
-				top: 40%;
-				transform: rotate( -45deg );
+				top: 50%;
+				transform: translateY(-50%)
+					rotate(-45deg);
+			}
+
+			.dropdown__inner {
+				padding: 10px;
 			}
 		}
 
 		&__title {
 			margin-bottom: 0;
 			position: relative;
+			cursor: pointer;
 
 			span {
 				width: 12px;
 				height: 12px;
 				position: absolute;
 				right: 21px;
-				top: 25%;
+				top: 50%;
 				border-right: 2px solid $blackened;
 				border-top: 2px solid $blackened;
-				transform: rotate( 135deg );
+				transform: translateY( -50%)
+					rotate(135deg);
 
 				&::before {
 					display: none;

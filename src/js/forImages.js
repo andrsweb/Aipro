@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const addSelected = (selector) => {
 	const images = document.querySelectorAll(selector)
 
-
 	if (!images.length) return
 
 	images.forEach(image => {
@@ -30,7 +29,7 @@ const addTries = () => {
 	const items = document.querySelectorAll('.field__item')
 
 	tries.forEach(trie => {
-		trie.textContent = 0
+		trie.textContent = 3
 	})
 
 	items.forEach(item => {
@@ -38,7 +37,12 @@ const addTries = () => {
 			if (item.classList.contains('selected')) {
 				tries.forEach(trie => {
 					parseInt(trie.textContent)
-					trie.textContent++
+
+					if (parseInt(trie.textContent) === 0) {
+						return
+					} else {
+						trie.textContent--
+					}
 				})
 			}
 		})
@@ -47,10 +51,9 @@ const addTries = () => {
 			if (!item.classList.contains('selected')) {
 				tries.forEach(trie => {
 					parseInt(trie.textContent)
-					if (parseInt(trie.textContent) === 0) {
-						return
+					if (parseInt(trie.textContent) === 3) {
+						trie.textContent++
 					}
-					trie.textContent--
 				})
 			}
 		})
