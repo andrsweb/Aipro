@@ -148,6 +148,7 @@
 		scrollbar-width: thin;
 		scrollbar-color: #F04A15 #C5CACF;
 		scroll-behavior: smooth;
+		padding-right: 20px;
 
 		&::-webkit-scrollbar {
 			width: 1px;
@@ -311,6 +312,17 @@
 
 		&_area {
 			height: 48px;
+			cursor: pointer;
+		}
+
+		&__text {
+			line-height: 1.2;
+			padding: 2px 8px;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
 		}
 
 		&__inner {

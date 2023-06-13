@@ -59,7 +59,7 @@ const insertTextInInput = () => {
 	dropdownItem.forEach(item => {
 		item.addEventListener('click', e => {
 			const target = e.target
-			dropdownArea.innerHTML = target.textContent.trim()
+			dropdownArea.value = target.textContent.trim()
 		})
 	})
 }

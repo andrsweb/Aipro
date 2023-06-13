@@ -145,6 +145,26 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+			overflow-y: auto;
+			max-height: 696px;
+			padding-right: 11px;
+			scrollbar-width: thin;
+			scrollbar-color: #F04A15 #C5CACF;
+		
+			&::-webkit-scrollbar {
+				width: 2px;
+			}
+		
+			&::-webkit-scrollbar-track {
+				background: #C5CACF;
+			}
+		
+			&::-webkit-scrollbar-thumb {
+				background-color:  #F04A15;
+				border-radius: 20px;
+				border: 4px solid  #F04A15;
+			}
+		
 		}
 	}
 
@@ -384,6 +404,10 @@
 			margin-right: 0;
 		}
 
+		a {
+			color: $blackened;
+		}
+
 		&:first-child::after,
 		&:nth-child(2)::after {
 			content: "";
@@ -401,7 +425,7 @@
 		}
 
 		&.active {
-			div {
+			a {
 				color: $accent1;
 			}
 			

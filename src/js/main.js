@@ -22,10 +22,6 @@ import './popups'
 //slides
 import './swiper'
 import './range-slider'
-import './copyText'
-
-//tabs
-import './tabs'
 
 //for post
 import './forImages'
@@ -35,9 +31,6 @@ import './aside'
 
 //for textarea
 import './forTextArea'
-
-//google
-import './googleSignin'
 
 //mask
 import './mask'

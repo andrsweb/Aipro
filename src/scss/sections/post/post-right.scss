@@ -80,12 +80,7 @@
 		cursor: pointer;
 		position: relative;
 
-		&.selected {
-			.field__checkbox {
-				background-color: $accent1;
-				border-color: $accent1;
-			}
-
+		&:hover {
 			.field__item_tries {
 				display: flex;
 				animation: opacity $tr forwards linear;
@@ -101,6 +96,13 @@
 						opacity: 1;
 					}
 				}
+			}
+		}
+
+		&.selected {
+			.field__checkbox {
+				background-color: $accent1;
+				border-color: $accent1;
 			}
 		}
 
