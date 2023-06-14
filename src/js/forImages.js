@@ -15,6 +15,8 @@ const addSelected = (wrapper, selector) => {
 		const target = e.target
 		const image = target.closest(selector)
 
+		if( !image ) return
+
 		if (!image.classList.contains('selected')) {
 			image.classList.add('selected')
 
