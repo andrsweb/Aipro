@@ -263,7 +263,7 @@ label {
 	font-size: 14px;
 	line-height: 24px;
 	font-feature-settings: 'pnum' on, 'lnum' on;
-	color: $blackened;
+	color: #707070;
 	padding: 11px 16px;
 	border: 1px solid #C5CACF;
 	border-radius: 24px;
@@ -294,7 +294,8 @@ label {
 		font-size: 14px;
 		line-height: 24px;
 		font-feature-settings: 'pnum' on, 'lnum' on;
-		color: $blackened;
+		color: #707070;
+		opacity: 1;
 	}
 }
 

@@ -238,7 +238,6 @@
 .dashboard__notification {
 	display: none;
 	align-items: center;
-	background-color: #C5EB76;
 	width: 100%;
 	max-width: 261px;
 	padding: 10px 0 10px 10px;
@@ -249,8 +248,7 @@
 	font-size: 16px;
 	line-height: 24px;
 	font-feature-settings: 'pnum' on, 'lnum' on;
-	color: #679700;
-	margin: 50px auto 0 auto;
+	margin: 20px auto 0 auto;
 	animation: fade 1s ease forwards;
 
 	@keyframes fade {
@@ -263,6 +261,16 @@
 		}
 	}
 
+	&.email_updated {
+		background-color: #C5EB76;
+		color: #679700;
+	}
+
+	&.email_error {
+		background: #FF9B95;
+		color: #C1170C;;
+	}
+
 	img {
 		margin-right: 10px;
 	}
@@ -272,16 +280,16 @@
 	}
 
 	@media all and (min-width: $sm) {
-		margin: 75px auto 0 auto;
+		margin: 10vh auto 0 auto;
 	}
 
 	@media all and (min-width: $lg) {
 		margin: 0;
-		margin-top: 150px;
+		margin-top: 10vh;
 	}
 
 	@media all and (min-width: $xl) {
-		margin-top: 328px;
+		margin-top: 35vh;
 	}
 }
 

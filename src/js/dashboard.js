@@ -30,18 +30,3 @@ const showSettings = () => {
 
 	if (!settings && !projects && !dashboardsSettings) return
 }
-
-const upDateEmail = () => {
-	const button = document.querySelector('.update_email')
-	const notification = document.querySelector('.dashboard__notification')
-
-	if (!button) return
-
-	button.addEventListener('click', () => {
-		if (!notification.classList.contains('updated')) {
-			notification.classList.add('updated')
-		}
-
-		setTimeout(() => { notification.classList.remove('updated') }, 5000)
-	})
-}
