@@ -227,7 +227,7 @@
 	height: auto;
 
 	@media all and (min-width: $lg) {
-		height: 614px;
+		max-height: 614px;
 	}
 }
 

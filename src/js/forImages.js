@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	addSelected('.images_items', '.field__item')
-	addSelected('.field__full_wrapper', '.field.full')
+	addSelected('.field__item')
+	addSelected( '.field.full')
 })
 
-const addSelected = (wrapper, selector) => {
-
-	const fieldWrapper = document.querySelectorAll(wrapper)
-
-	if (!fieldWrapper.length) return
+const addSelected = (selector) => {
 
 	document.querySelector('body').addEventListener('click', e => {
 		const target = e.target
