@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	showHiddenWindow()
 	showSettings()
-	upDateEmail()
 })
 
 const showHiddenWindow = () => {

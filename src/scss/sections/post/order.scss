@@ -127,6 +127,14 @@
 			width: 100%;
 			max-width: 100%;
 		}
+
+		.signin__input {
+			color: $blackened;
+
+			&::placeholder {
+				color: $blackened;
+			}
+		}
 	}
 
 	.card__elements {
