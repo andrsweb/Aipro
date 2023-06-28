@@ -12,7 +12,7 @@ const initRangeSlider = () => {
 
 	if (!selector) return
 
-	rangesliderJs.create(selector, { min: 1, max: 20, value: 0, step: 1 })
+	rangesliderJs.create(selector)
 }
 
 const inputValue = () => {

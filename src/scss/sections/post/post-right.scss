@@ -50,6 +50,10 @@
 	width: 320px;
 	height: 250px;
 
+	&__no-text {
+		margin: auto 0;
+	}
+
 	@media all and (min-width: $sm) {
 		width: 400px;
 	}

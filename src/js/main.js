@@ -9,6 +9,7 @@ import './dropdowns'
 
 //signin scripts
 import './signin'
+import './error'
 
 //dashboard scripts
 import './dashboard'
