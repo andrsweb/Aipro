@@ -8,7 +8,7 @@ const inputError = () => {
 	const inputs = document.querySelectorAll( '.signin__input')
 	const error  = document.querySelector( '.error__text')
 
-	if( ! inputs.length && ! error ) return
+	if( ! inputs.length || ! error ) return
 
 	inputs.forEach( input => {
 		if( input.classList.contains( 'error')) {

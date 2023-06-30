@@ -9,9 +9,9 @@ const autoGrow = (element) => {
 
 	textarea.forEach(area => {
 		area.addEventListener('keyup', e => {
-			area.style.height = 'auto'
+			area.style.height = '48px'
 			let scrollHeight = e.target.scrollHeight
-			area.style.height = `${scrollHeight}px`
+			area.style.height = `${ scrollHeight}px`
 		})
 	})
 

@@ -437,7 +437,7 @@
 		}
 	}
 
-	div {
+	div, .no-bread {
 		font-family: $ff-title;
 		font-style: normal;
 		font-weight: $fw-regular;
@@ -449,7 +449,7 @@
 		transition: color ease $tr;
 
 		@media all and (min-width: $md) {
-			font-size: 14px;
+			font-size: 16px;
 			line-height: 24px;
 		}
 	}
