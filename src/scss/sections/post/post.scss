@@ -437,7 +437,7 @@
 		}
 	}
 
-	div, .no-bread {
+	div {
 		font-family: $ff-title;
 		font-style: normal;
 		font-weight: $fw-regular;
@@ -472,5 +472,22 @@
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: #F02215;
 		padding-left: 18px;
+	}
+}
+
+.no-bread {
+	font-family: $ff-title;
+	font-style: normal;
+	font-weight: $fw-regular;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $blackened;
+	transition: color ease $tr;
+
+	@media all and (min-width: $md) {
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
